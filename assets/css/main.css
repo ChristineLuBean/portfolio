@@ -10,7 +10,7 @@
 /*font-family: 'Fredoka', sans-serif;
 font-family: 'Fredoka One', cursive;
 font-family: 'Source Sans Pro', sans-serif; */
-html {
+body {
 	scroll-behavior: smooth;
   }
   
@@ -225,13 +225,18 @@ input, select, textarea {
 			text-align: justify;
 		}
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	font-weight: 300;
 	line-height: 1.5;
 	margin: 0 0 0.7em 0;
 	letter-spacing: -0.025em;
 }
-
+h1 {
+	font-weight: 300;
+	line-height: 1.5;
+	/* margin: 0 0 0.7em 0; */
+	letter-spacing: -0.025em;
+}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	color: inherit;
 	text-decoration: none;
@@ -3137,13 +3142,23 @@ footer.major {
 /* Header */
 
 	#header {
-		padding: 5em 5em 1em 5em ;
+		/* padding: 5em 1em 1em 5em ; */
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		text-align: center;
 	}
+	#header #logoSection {
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
 
-		#header h1 {
-			margin: 0 0 0.25em 0;
-		}
+		/* #header h1 {
+			margin: 0 0 1em 0;
+		} */
 
 		#header p {
 			font-size: 1.25em;
@@ -3158,7 +3173,7 @@ footer.major {
 				font-size: 3.25em;
 			}
 
-			#header.alt > * {
+			#header.alt > section > * {
 				-moz-transition: opacity 1.25s ease;
 				-webkit-transition: opacity 1.25s ease;
 				-ms-transition: opacity 1.25s ease;
@@ -3170,7 +3185,7 @@ footer.major {
 				opacity: 1;
 			}
 
-			#header.alt .logo {
+			#header.alt section .logo {
 				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
 				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
 				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
@@ -3183,10 +3198,28 @@ footer.major {
 				margin: 0 0 1.5em 0;
 			}
 
+			#header.alt .fa-arrow-down {
+				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
+				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
+				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
+				transition: opacity 1.25s ease, transform 0.5s ease;
+				-moz-transition-delay: 1s;
+				-webkit-transition-delay: 1s;
+				-ms-transition-delay: 1s;
+				transition-delay: 1s;
+				display: block;
+				margin: 0 0 0.5em 0;
+			}
+
 				#header.alt .logo img {
 					display: block;
 					margin: 0 auto;
 					max-width: 25%;
+				}
+
+				.fa-arrow-down {
+					font-size: 5rem;
+					color: #ffffff;
 				}
 
 		@media screen and (max-width: 1280px) {
