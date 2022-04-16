@@ -13,7 +13,7 @@ async function gql(query, variables={}) {
     return data.json();
 }
 
-const GET_USER_ARTICLES = `
+const GET_STOCKS = `
     query GetUserArticles($page: Int!) {
         user(username: "christinelubean") {
             publication {
@@ -29,41 +29,32 @@ const GET_USER_ARTICLES = `
     }
 `;
 
-gql(GET_USER_ARTICLES, { page: 0 })
+gql(GET_USER_STOCKS, { page: 0 })
     .then(result => {
-        const articles = result.data.user.publication.posts;
-        let container = document.createElement('div');
+        const GET_USER_STOCKS = actives
 
-        articles.forEach(article => {
-            container.className = 'main';
 
-            let coverImage = document.createElement('img');
-            coverImage.src = `${article.coverImage}`;
-            coverImage.className = 'coverImage';
+        activeStock.forEach(stock => {
+            let container = document.createElement('ul');
+            container.classList.add('stock');
 
-            let title = document.createElement('h2');
-            title.innerText = article.title;
-
-            let brief = document.createElement('p');
-            brief.innerText = article.brief;
-
-            let link = document.createElement('a');
-            link.innerText = 'Read more...';
-            link.href = `https://christinelubean.hashnode.dev/${article.slug}`;
+            let brief = document.createElement('li');
+            brief.innerText = actives.stock;
 
             container.appendChild(coverImage);
             container.appendChild(title);
             container.appendChild(brief);
             container.appendChild(link);
+            document.querySelector('.app').appendChild(container);
+
+            console.log(result.data.user)
         })
 
-        document.querySelector('.app').appendChild(container);
+
 });
 
 document.getElementById('articles').parentNode.innerHTML = `
 <h1 class="app-heading">My Blog</h1>
 <div class="app">
-
 </div>`;
 
-  

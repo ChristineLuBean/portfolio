@@ -10,6 +10,20 @@
 /*font-family: 'Fredoka', sans-serif;
 font-family: 'Fredoka One', cursive;
 font-family: 'Source Sans Pro', sans-serif; */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
 body {
 	scroll-behavior: smooth;
   }
@@ -191,7 +205,6 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
 		color: inherit;
 	}
 
@@ -2728,10 +2741,7 @@ h6 {
 			.app {
 				margin-top: 2em;
 			}
-			.coverImage {
-				width: 35%;
-				margin: 0.6em 2em 2em 0
-			}
+
 
 	#contactIcons {
 		text-align: left;
@@ -3523,20 +3533,17 @@ footer.major {
 		#main .spotlight .image {
 
 		}
+		
+		#content .post {
+			padding: 3em 5em;
 
-		#main > .main {
-			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
-		}
-
-		#main>.main .main {
-			display: grid; 
-			grid-auto-columns: 1fr; 
-			grid-template-columns: 1fr; 
-			grid-template-rows: 2fr 1fr; 
-			gap: 0px;
-			height: 100%;
+			height: max-content;
 			border-bottom: solid 1px #dddddd;
+		}
+		.coverImage {
+			float: left;
+			margin-right: 2em;
+			width: 33%;
 		}
 
 			#main > .main:first-child {
@@ -3558,6 +3565,7 @@ footer.major {
 					border-bottom-right-radius: 0;
 					border-bottom-left-radius: 0;
 				}
+
 
 		@media screen and (max-width: 1280px) {
 
