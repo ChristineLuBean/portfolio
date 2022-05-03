@@ -1,193 +1,293 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<script src="https://kit.fontawesome.com/d4cd10afa8.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/header-main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Stellar by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <style>
+      .hidden {
+        opacity: 0;
+      }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
-			
-			<!-- Header -->
-			<header id="header" class="alt">
-				<section id="logoSection">
-				<span class="logo"><img src="images/logo.svg" alt="" /></span>
-				<h1 id="#logoName">Christine LuBean</h1>
-			</section>
-				<i class="fa-solid fa-arrow-down"></i>
-			</header>
+      .visible {
+        opacity: 1;
+        transition: opacity 1s ease-out;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/d4cd10afa8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-header.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <script>
+      document.body.className = "hidden";
+    </script>
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#first">Services</a></li>
-						<li><a href="#second">Portfolio</a></li>
-						<li><a href="#cta">Contact</a></li>
-					</ul>
-				</nav>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <section id="logoSection">
+          <span class="logo rotate-in-2-bck-ccw"
+            ><img src="images/logo.svg" alt=""
+          /></span>
+		  <div>
+          <h1 class="fade-in-fwd">Christine LuBean</h1>
+		</div>
+        </section>
+      </header>
 
-				<!-- Main -->
-				<div id="main">
+      <!-- Nav -->
+      <nav id="nav" class="fade-in-bottom">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-					<!-- Introduction -->
-					<section id="intro" class="main">
-						<div class="content">
-							<header class="major">
-								<h2>Hi, I'm <strong>Christine</strong>, <br>your next <br>software engineer.</h2>
-								<img src="images/pic01.png" alt="" />	
-							</header>
-						</div>
-					</section>
+      <!-- Main -->
+      <div id="main" class="fade-in-bottom">
+        <!-- Home -->
+        <section id="home" class="main">
 
-					<!-- First Section -->
-					<section id="first" class="main special">
-						<header class="major">
-							<h3>My Work Process</h3>
-							<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-							posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-						</header>
-						<ul class="process">
-							<li class="style1">
-								<i class="icon fa-regular fa-comment"></i>
-								<strong>Consultation</strong>
-								<p>
-									I conduct user research to identify the problem I want to solve.
-								</p>
-							</li>
-							<li class="style3">
-								<span class="icon fa-copy"></span>
-								<strong>Proposal</strong> 
-								<p>	I brainstorm possible design solutions to the identified problem.
-									I create wireframes and sketches of the product I’m about to design.
-								</p>
-							</li>
-							<li class="style4">
-								<span class="icon solid fa-laptop"></span>
-								<strong>Creation</strong> 
-								<p>
-									I create high fidelity design and prototype the screens.
-								</p>
-							</li>
-							<li class="style5">
-								<i class="icon fa-regular fa-paper-plane"></i>
-								<strong>Implement</strong> 
-								<p>
-									After designing, I deliver for implementation.
-								</p>
-							</li>
-						</ul>
+            <div class="content hideme">
+              <header class="major">
+                <h2>
+                  Hi, I'm <strong>Christine</strong>, <br />your next
+                  <br />software engineer.
+                </h2>
+				<img src="images/pic01.svg" alt="" />
+              </header>
+            </div>
+        </section>
 
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</footer>
-					</section>
+      
 
-					<!-- Second Section -->
-					<section id="second" class="main special">
-						<header class="major">
-							<h3>My Latest Projects</h3>
-						</header>
-						<ul class="features">
-							<li>
-								<div id="layout1" class="col-4"></div>
-								<a href="#" class="button small">View</a>
-							</li>
-							<li>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<h4>Title</h4>
-								<p>
-									Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate.
-								</p>
-								<a href="#" class="button small">View</a>
-							</li>
-							<li>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<h4>Title</h4>
-								<p>
-									Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate.
-								</p>
-								<a href="#" class="button small">View</a>
-							</li>
-						</ul>
-					</section>
+        <!-- Services Section -->
 
-					<!-- Get Started -->
-					<section id="cta" class="main special">
-						<section class="major">
-							<h3>Let's connect!</h3>
-								<p>
-									I am currently accepting new freelance clients and would love to work on your projects and bring your ideas to life. I am just a click away.
-								</p>
-							<section id="contactMe" class="row gtr-uniform">
-							<section class="col-4 col-12-xsmall" id="contactInfo">
-								<ul id="contactIcons">
-									<li><i class="fa-solid fa-location-dot"></i> Central Washington</li>
-									<li><i class="fa-regular fa-envelope"></i> christinemlubean@gmail.com</li>
-									<li><i class="fa-solid fa-voicemail"></i> +1-000-000-0000</li>
-								</ul>
-							</section>
-										
-							<section class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-										</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</form>
-							</section>
-						</section>
-					</section>
-				</div>
+        <section id="services" class="main special">
+          <header class="major hideme">
+            <h2>My Work Process</h2>
+            <p>
+              My website designs are simple, interesting, and functional. With my mobile first approach, you can expect me to make you a website where your customers will enjoy using. 
+              
+              I do this by listening to you and understanding your target audience. Once I gather this information, I put together a plan using my extensive online knowledge to create a website you'll love.
+            </p>
+          </header>
+          <ul class="statistics">
+            <li class="style1">
+              <i class="icon fa-regular fa-comment"></i>
+              <strong>Consult</strong>
+              <p>
+				I determine the priorities and
+                requirements for the project.
+			</p>
+            </li>
+            <li class="style2">
+				<i class="icon fa-regular fa-lightbulb"></i>
+              <strong>Develop</strong>
+              <p>
+                I conceptualize 
+                solutions and conduct any research needed.
+              </p>
+            </li>
+            <li class="style3">
+				<span class="icon fa-copy"></span>
+				<strong>Draft</strong> 
+				<p>	
+					I map out and refine the production process.
+				</p>
+            </li>
+            <li class="style4">
+				<span class="icon solid fa-laptop"></span>
+				<strong>Create</strong> 
+				<p>
+					I produce a high fidelity product to fulfill its specifications.
+				</p>
+            </li>
+			<li class="style5">
+				<i class="icon fa-regular fa-paper-plane"></i>
+				<strong>Finalize</strong> 
+				<p>
+					I deliver the final product after approval for implementation.
+				</p>
+			</li>
+          </ul>
 
-				<!-- Footer -->
-					<footer id="footer">
 
-						<section>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">Linked In</span></a></li>
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Christine LuBean. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+          <footer class="major">
+            <ul class="actions special">
+              <li><a href="#contact" class="button">Hire Me</a></li>
+            </ul>
+          </footer>
+        </section>
 
-			</div>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="main special">
+		<section class="hideme">
+      <header class="major">
+        <h3>My Latest Projects</h3>
+      </header>
+      <ul class="features">
+        <li>
+          <div id="layout1" class="col-4"></div>
+          <!-- <a href="#" class="button small">View</a> -->
+        </li>
+        <li>
+          <div id="layout2" class="col-4"></div>
+          <!-- <a href="#" class="button small">View</a> -->
+        </li>
+        <li>
+          <div id="layout3" class="col-4"></div>
+          <!-- <a href="#" class="button small">View</a> -->
+        </li>
+      </ul>
+        </section>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <!-- About Me -->
+  <section id="about" class="main special">
+    <header class="major hideme">
+      <h2>About Me</h2>
+      <img id="aboutImage" src="images/CSS_Monochromaticme.svg" alt="Illustration of a woman sitting on a giant computer monitor and using a laptop">
+      <p>
+      I’m a software engineer, writer, and artist living in Washington state.
+      </p>
+      <p>
+      My love of solving problems and learning how things work lead me to teaching myself how to create websites when I was 11. I went from a kid with a beaten up HTML manual to a full-stack developer over the course of my teenage and young adulthood years. 
+    </p>
+    <p>
+      At the moment, I’m working as a freelance developer. Using my skills as a designer and programmer, I create beautifully dynamic and accessible websites and web apps.
+    </p>
+    <p>
+      When I’m not coding, drawing, or writing, I’m playing video games with my husband while being harassed by my two cats.
+    </p>
+  </section>
 
-	</body>
-</html>	
+    </header>
+    
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="main special">
+  <section class="hideme">
+        <h3>Let's connect!</h3>
+        <p>
+          I am currently accepting new freelance clients and would love to work on your projects to bring your ideas to life. I am just a click away.
+        </p>
+
+      <section>
+        <form method="post" action="mailto:christinelubean+testform@gmail.com">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+
+              <input type="text" name="visitor_name" id="name" value="" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="email" name="visitor_email" id="email" value="" placeholder="Email" required>
+            </div>
+           
+            <div class="col-12">
+              <textarea name="visitor_message" id="message" placeholder="Enter your message" rows="6"></textarea>
+            </div>
+
+
+            <div class="col-12  form-btns-box">
+
+              <ul class="checkboxes">
+                <!-- <li>                
+                  <input type="checkbox" id="copy" name="visitor_copy">
+                  <label for="copy">Email me a copy</label>
+                </li> -->
+                <li>
+                  <input type="checkbox" id="human" name="visitor_human">
+                  <label for="visitor_human">Not a robot</label>
+                </li>
+              </ul>
+
+              <ul class="actions">
+                <li><input type="submit" value="Send Message" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+
+              </ul>
+
+
+            </div>
+          </div>
+        </form>
+      </section>
+
+      </section>
+</section>
+
+
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+
+          <ul class="social-media icons">
+            <li>
+              <a href="https://twitter.com/christinelubean" class="icon brands fa-twitter alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/christinelubean/" class="icon brands fa-linkedin alt"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/christinelubean/" class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/ChristineLuBean" class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+
+        <p class="copyright">
+          &copy; Christine LuBean. Design: <a href="https://html5up.net">HTML5 UP</a>.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/js/jquery.scrollex.min.js"></script>
+
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcGuLsfAAAAALSyVZCvlHEUr5tK7Oe46GqzAd76"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6LcGuLsfAAAAALSyVZCvlHEUr5tK7Oe46GqzAd76', {action: 'login'}).then(function(token) {
+       ...
+    });
+});
+</script>
+  </body>
+</html>

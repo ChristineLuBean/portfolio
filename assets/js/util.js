@@ -266,6 +266,8 @@
 
 		// Body.
 
+	
+
 			// Event: Hide panel on body click/tap.
 				$body.on('click touchend', function(event) {
 					$this._hide(event);
