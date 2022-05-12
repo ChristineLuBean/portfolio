@@ -156,8 +156,10 @@ $(function(){  // $(document).ready shorthand
   });
 
   function menuOnClick() {
+	
 	document.getElementById("menu-bar").classList.toggle("change");
-	document.getElementById("nav").classList.toggle("clear-bg-toggle");
+	document.getElementById("nav").classList.toggle("nav-bg-toggle");
+	document.getElementById("navLinks").classList.toggle("noDisplay");
 	document.getElementById("menu2").classList.toggle("change");
 	document.getElementById("menu-bg").classList.toggle("change-bg");
   }
