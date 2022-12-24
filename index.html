@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Christine LuBean</title>
@@ -14,10 +14,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.11/dist/css/index.min.css"
-    /> -->
+
     <link
       id="google-fonts-toucan"
       rel="stylesheet"
@@ -27,10 +24,34 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
 
-    <meta name="theme-color" content="#3a1954" />
+    <script
+      src="https://kit.fontawesome.com/d4cd10afa8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+
+    <!-- <meta name="theme-color" content="#3a1954" /> -->
   </head>
 
   <body class="is-preload">
+    <!-- Navigation bar -->
+    <nav id="navigation-bar" class="navigation-menu-collapsed">
+      <!-- Add a toggle button for the mobile menu -->
+      <div class="navigation-bar-toggle" onclick="toggleMenu()">
+        <!-- Use spans with a top and bottom border to create the hamburger menu icon -->
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+      <ul id="navigation-menu">
+        <li><a href="#hero-section">Home</a></li>
+        <li><a href="#bio-section">Bio</a></li>
+        <li><a href="#resume-section">Resume</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#blog-section">Blog</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
     <aside class="parallax">
       <header>
         <h1>I make. I write. I hack.</h1>
@@ -39,7 +60,7 @@
 
     <main class="content-outer">
       <div class="content-inner">
-        <header>
+        <header class="fade-in">
           <div class="portrait"></div>
           <h2>
             <strong>Christine LuBean</strong>
@@ -48,7 +69,7 @@
         </header>
 
         <section id="introduction">
-          <p>
+          <p class="fade-in">
             My love of solving problems and learning how things work led me to
             teaching myself how to create websites when I was 11. I went from a
             kid with a beaten up HTML manual to a full-stack developer over the
@@ -56,7 +77,7 @@
             websites, I began keeping a personal blog, and this, along with my
             love of reading, inspired me to study English in college.
           </p>
-          <p>
+          <p class="fade-in">
             It wasn’t until after finishing my degree that I discovered a
             passion for cyber security. Although I did web development on the
             side, it was during the 2020 pandemic that I decided to go into tech
@@ -67,28 +88,15 @@
             wanted. It combines my love of tech with my passion for research and
             writing.
           </p>
-          <!-- <p
 
 
-
-
-        >
-          I am a self-motivated and self-directed worker. I can adapt quickly
-          to changes in priorities and maintain a positive attitude and a
-          strong work ethic with a high level of professionalism. My personal
-          strengths include creativity, an innovative outlook on challenges,
-          great interpersonal skills, and an ability to translate ideas to a
-          wide variety of audiences--such as differing generational or
-          cultural backgrounds.
-        </p> -->
-
-          <p>
+          <p class="fade-in">
             I'm an ethical hacker who wants to go beyond just preventing
             exploits. I want to improve the internet by securing webpages,
             applications, and teaching people how to be safe while they browse
             online.
           </p>
-          <p>
+          <p class="fade-in">
             When I’m not writing, coding, or hacking, I’m either creating
             digital illustrations, or I'm playing video games with my husband
             while being harassed by my two cats.
@@ -100,12 +108,12 @@
             <span class="button-text">Learn More</span>
           </a>
         </section>
-        <h3>Recent Work</h3>
-        <section id="portfolio">
+        <h3 class="fade-in">Recent Work</h3>
+        <section id="portfolio" class="fade-in">
           <div id="pic-div1">
             <article id="pic1">
               <a href="#" class="image fit thumb">
-                <!-- <img src="/assets/img/thumbs/01.jpg" alt="" /> -->
+
               </a>
               <h4>Lorem ipsum dolor sit.</h4>
               <p>
@@ -117,7 +125,7 @@
           <div id="pic-div2">
             <article id="pic2">
               <a href="#" class="image fit thumb">
-                <!-- <img src="/assets/img/thumbs/02.jpg" alt="" /> -->
+
               </a>
               <h4>Lorem ipsum dolor sit.</h4>
               <p>
@@ -129,7 +137,7 @@
           <div id="pic-div3">
             <article id="pic3">
               <a href="#" class="image fit thumb">
-                <!-- <img src="/assets/img/thumbs/03.jpg" alt="" /> -->
+
               </a>
               <h4>Lorem ipsum dolor sit.</h4>
               <p>
@@ -142,7 +150,7 @@
           <div id="pic-div4">
             <article id="pic4">
               <a href="#" class="image fit thumb">
-                <!-- <img src="/assets/img/thumbs/04.jpg" alt="" /> -->
+
               </a>
               <h4>Lorem ipsum dolor sit.</h4>
               <p>
@@ -154,7 +162,7 @@
           <div id="pic-div5">
             <article id="pic5">
               <a href="#" class="image fit thumb">
-                <!-- <img src="/assets/img/thumbs/05.jpg" alt="" /> -->
+
               </a>
               <h4>Lorem ipsum dolor sit.</h4>
               <p>
@@ -166,7 +174,7 @@
           <div id="pic-div6">
             <article id="pic6">
               <a href="#" class="image fit thumb">
-                <!-- <img src="/assets/img/thumbs/06.jpg" alt="" /> -->
+
               </a>
               <h4>Lorem ipsum dolor sit.</h4>
               <p>
@@ -178,7 +186,7 @@
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="fade-in">
       <section id="social">
         <ul class="social-media icons">
           <li>
@@ -204,13 +212,8 @@
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script
-      src="https://kit.fontawesome.com/d4cd10afa8.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.11/dist/scroll.min.js"></script>
-    <script src="assets/js/main.js"></script> -->
-    <script>
+
+    <!-- <script>
       window.ga = function () {
         ga.q.push(arguments);
       };
@@ -221,6 +224,6 @@
       ga('set', 'transport', 'beacon');
       ga('send', 'pageview');
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script> -->
   </body>
 </html>

@@ -11,7 +11,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Merienda:wght@300;400;700;900&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 
 html {
   color: #222;
@@ -100,7 +100,7 @@ html {
 }
 body {
   background: #3a1954;
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -110,7 +110,97 @@ body {
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
-body aside.parallax {
+
+#navigation-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  /* Change the display property to none */
+}
+
+.navigation-bar-toggle {
+  /* Make the toggle button visible and styled like a hamburger menu */
+  display: block;
+  cursor: pointer;
+  /* Style the toggle button as desired */
+  padding: 10px;
+  color: #410754;
+}
+.navigation-bar-toggle span {
+  display: block;
+  background-color: #fff;
+  height: 6px;
+  width: 65px;
+  margin: 5px 0;
+  border-radius: 15px;
+}
+.navigation-menu-collapsed #navigation-menu {
+  /* Hide the navigation-bar links when the menu is collapsed */
+  display: none;
+}
+#navigation-bar {
+  background-color: hsla(270, 76%, 59%, 0.4);
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+
+#navigation-bar a {
+  color: #eadff3;
+  font-family: "Amatic SC", cursive;
+  text-decoration: none;
+  font-size: 2.6em;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Media query for screens larger than 800px */
+@media screen and (min-width: 800px) {
+  #navigation-bar {
+    display: flex;
+    justify-content: center;
+  }
+
+  #navigation-bar a:hover {
+    background-color: #ffffff;
+    color: #c482e6;
+  }
+  .navigation-bar-toggle span {
+    display: none;
+  }
+  #navigation-bar.scrolled {
+    background-color: #c482e6;
+  }
+
+  #navigation-bar.hidden {
+    top: -75px;
+  }
+
+  #navigation-bar #navigation-menu {
+    display: block;
+  }
+
+  #navigation-menu ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #navigation-menu li {
+    display: inline-block;
+  }
+}
+
+aside.parallax {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -119,8 +209,9 @@ body aside.parallax {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
-body aside.parallax:after {
+aside.parallax:after {
   background-image: url("/img/bg.png");
   background-repeat: no-repeat;
   background-position: bottom;
@@ -135,46 +226,47 @@ body aside.parallax:after {
   transform: translateZ(-1px) scale(2);
   -webkit-transform: translateZ(-1px) scale(2);
 }
-body header h1 {
+header h1 {
   text-align: center;
   margin: 0px;
-  font-family: "Merienda", cursive;
+  font-family: "Amatic SC", cursive;
   font-size: clamp(2.93rem, 2.1vw + 2.19rem, 7.58rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.7);
 }
-body main {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
-body main.content-outer {
+main.content-outer {
   background-color: #3a1954;
   perspective: 2px;
   -webkit-perspective: 2px;
 }
 @media (min-width: 769px) {
-  body main div.content-inner {
+  div.content-inner {
     width: 50%;
   }
 }
 @media (max-width: 768px) {
-  body main div.content-inner {
+  div.content-inner {
     width: 80%;
   }
 }
-body main .content-inner {
+.content-inner {
   color: #ebd9d7;
   line-height: 1.4em;
   margin: 0 auto;
   display: block;
 }
-body main .content-inner p {
+p {
   font-size: clamp(1.2rem, 0.54vw + 1rem, 2.4rem);
   line-height: 2em;
   margin: 0.8em 0;
 }
-body main .content-inner header {
+header {
   display: flex;
   gap: 1.2em;
   justify-content: center;
@@ -182,10 +274,10 @@ body main .content-inner header {
   font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
   margin: 3em 0 4em 0;
 }
-body main .content-inner header:hover .portrait {
+header:hover .portrait {
   box-shadow: 0 0 20px hsla(43deg, 80%, 82%, 0.8);
 }
-body main .content-inner header .portrait {
+header .portrait {
   width: 6.5em;
   height: 6.5em;
   border: 0.3em solid #f8e6a9;
@@ -194,62 +286,62 @@ body main .content-inner header .portrait {
   background-size: cover;
   transition: box-shadow 300ms;
 }
-body main .content-inner header h2 {
-  font-family: "Assistant", sans-serif;
+header h2 {
+  font-family: "Raleway", sans-serif;
   font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
   font-weight: 500;
   line-height: 1.25em;
   color: #e7bade;
   transition: text-shadow 300ms;
 }
-body main .content-inner header h2 strong {
-  font-family: "Merienda", cursive;
+header h2 strong {
+  font-family: "Amatic SC", cursive;
   font-size: 1.5em;
   color: #c744c7;
   font-weight: 700;
 }
-body main .content-inner #portfolio {
+#portfolio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 3em 3em;
   margin: 0 0 4em 0;
 }
-body main .content-inner #portfolio div#pic-div1 {
+#pic-div1 {
   grid-column: 1/2;
   grid-row: 1/3;
 }
-body main .content-inner #portfolio div#pic-div2 {
+#pic-div2 {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-body main .content-inner #portfolio div#pic-div3 {
+#pic-div3 {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
 }
-body main .content-inner #portfolio div#pic-div4 {
+#pic-div4 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 4;
 }
-body main .content-inner #portfolio div#pic-div5 {
+#pic-div5 {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
 }
-body main .content-inner #portfolio div#pic-div6 {
+#pic-div6 {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
 }
-body main .content-inner #portfolio div article {
+#portfolio article {
   padding: 1.7em;
   border-radius: 2px;
   transition: all ease-in-out 500ms;
@@ -260,53 +352,53 @@ body main .content-inner #portfolio div article {
   height: 100%;
   width: 100%;
 }
-body main .content-inner #portfolio div article#pic1 {
+#pic1 {
   background: url("/img/01.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-body main .content-inner #portfolio div article#pic2 {
+#pic2 {
   background: url("/img/02.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-body main .content-inner #portfolio div article#pic3 {
+#pic3 {
   background: url("/img/03.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-body main .content-inner #portfolio div article#pic4 {
+#pic4 {
   background: url("/img/04.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-body main .content-inner #portfolio div article#pic5 {
+#pic5 {
   background: url("/img/05.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-body main .content-inner #portfolio div article#pic6 {
+#pic6 {
   background: url("/img/06.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-body main .content-inner #portfolio div article h4 {
-  font-family: "Assistant", sans-serif;
+#portfolio h4 {
+  font-family: "Raleway", sans-serif;
   font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
   line-height: 1.2em;
   margin: 1em 0 0.5em 0;
 }
-body main .content-inner #portfolio div article p {
+#portfolio p {
   font-size: clamp(0.96rem, 0.38vw + 0.83rem, 1.8rem);
   margin: 1em 0;
   line-height: 2em;
 }
-body main .content-inner #portfolio div article:hover {
+#portfolio article:hover {
   transform: scale(1.05);
   color: #ffffff;
   box-shadow: 0 10px 20px -10px rgb(0, 0, 0);
 }
-body .btn {
+.btn {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -317,23 +409,23 @@ body .btn {
   background: transparent;
   padding: 0;
   margin: 2em auto 3em auto;
-  font-family: "Assistant", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 @media (min-width: 951px) {
-  body .btn {
+  .btn {
     font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
   }
 }
 @media (max-width: 950px) {
-  body .btn {
+  .btn {
     font-size: clamp(1.88rem, 1.08vw + 1.5rem, 4.26rem);
   }
 }
-body .btn.learn-more {
+.learn-more {
   width: 10em;
   height: auto;
 }
-body .btn.learn-more .circle {
+.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -343,7 +435,7 @@ body .btn.learn-more .circle {
   background: #f8e6a9;
   border-radius: 1.625rem;
 }
-body .btn.learn-more .circle .icon {
+.learn-more .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -351,14 +443,14 @@ body .btn.learn-more .circle .icon {
   margin: auto;
   background: #934394;
 }
-body .btn.learn-more .circle .icon.arrow {
+.learn-more .arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
 }
-body .btn.learn-more .circle .icon.arrow::before {
+.learn-more .arrow::before {
   position: absolute;
   content: "";
   top: -0.29rem;
@@ -369,7 +461,7 @@ body .btn.learn-more .circle .icon.arrow::before {
   border-right: 0.125rem solid #3a1954;
   transform: rotate(45deg);
 }
-body .btn.learn-more .button-text {
+.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -384,40 +476,40 @@ body .btn.learn-more .button-text {
   text-align: center;
   text-transform: uppercase;
 }
-body .btn:hover .circle {
+.btn:hover .circle {
   width: 100%;
   background: #f8e6a9;
   box-shadow: 0 0 15px hsla(43deg, 80%, 82%, 0.6);
 }
-body .btn:hover .circle .icon.arrow {
+.btn:hover .arrow {
   background: #3a1954;
   transform: translate(1em, 0);
 }
-body .btn:hover .button-text {
+.btn:hover .button-text {
   color: #3a1954;
 }
-body h3 {
+h3 {
   font-size: clamp(2.34rem, 1.51vw + 1.81rem, 5.68rem);
-  font-family: "Assistant", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
   margin: 2em 0;
 }
-body h3:hover {
+h3:hover {
   text-shadow: 0 0 10px hsla(43deg, 80%, 82%, 0.8);
 }
-body footer {
+footer {
   font-size: clamp(0.96rem, 0.38vw + 0.83rem, 1.8rem);
   color: #ebd9d7;
   padding-bottom: 3em;
 }
 @media (max-width: 950px) {
-  body footer {
+  footer {
     padding-bottom: 6em;
   }
 }
-body footer .icons {
+footer .icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -426,19 +518,19 @@ body footer .icons {
   list-style: none;
   margin-bottom: 1em;
 }
-body footer .icons .icon {
+footer .icon {
   transition: all ease-in-out 250ms;
   color: #c682e4;
 }
-body footer .icons .icon:hover {
+footer .icon:hover {
   color: #f8e6a9;
   transform: scale(1.2);
   filter: drop-shadow(0 0 10px #c682e4);
 }
-body footer strong {
+footer strong {
   font-size: 1.1em;
 }
-body footer strong a {
+footer a {
   color: rgba(0, 0, 0, 0);
   padding-bottom: 0.1em;
   background: linear-gradient(90deg, #f8e6a9 50%, #c744c7 0)
@@ -449,22 +541,36 @@ body footer strong a {
   transition: 0.5s;
   cursor: pointer;
 }
-body footer strong a:hover {
+footer a:hover {
   --_p: 100%;
   text-shadow: 0 0 10px hsla(43deg, 80%, 82%, 0.8);
 }
-body footer ul {
+footer ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
 }
-body footer ul li {
+footer li {
   display: flex;
   justify-content: center;
   align-content: center;
   gap: 0.25em;
   margin: 0.25em 0;
+}
+
+.fade-in {
+  /* Add a transition to the opacity property */
+  transition: opacity 0.3s;
+  /* Set the initial opacity to 0 */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+
+.fade-in.visible {
+  /* When the element is visible in the viewport, set the opacity to 1 */
+  opacity: 1;
 }
 
 /* ==========================================================================
@@ -475,10 +581,10 @@ body footer ul li {
  * Hide visually and from screen readers
  */
 
-.hidden,
+/* .hidden,
 [hidden] {
   display: none !important;
-}
+} */
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -489,7 +595,7 @@ body footer ul li {
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+/* .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -498,9 +604,9 @@ body footer ul li {
   padding: 0;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
+  width: 1px; */
+/* 1 */
+/* } */
 
 /*
  * Extends the .sr-only class to allow the element
@@ -508,7 +614,7 @@ body footer ul li {
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
+/* .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
   height: auto;
@@ -517,15 +623,15 @@ body footer ul li {
   position: static;
   white-space: inherit;
   width: auto;
-}
+} */
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
+/* .invisible {
   visibility: hidden;
-}
+} */
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -533,16 +639,16 @@ body footer ul li {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+/* @media only screen and (min-width: 35em) { */
+/* Style adjustments for viewports that meet the condition */
+/* }
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
+  (min-resolution: 120dpi) { */
+/* Style adjustments for high resolution devices */
+/* } */
 
 /* ==========================================================================
    Print styles.
@@ -550,14 +656,14 @@ body footer ul li {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+/* @media print {
   *,
   *::before,
   *::after {
     background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
+    color: #000 !important;*/
+/* Black prints faster */
+/* box-shadow: none !important;
     text-shadow: none !important;
   }
 
@@ -572,13 +678,13 @@ body footer ul li {
 
   abbr[title]::after {
     content: " (" attr(title) ")";
-  }
+  } */
 
-  /*
+/*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
+/* a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
   }
@@ -591,13 +697,13 @@ body footer ul li {
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
-  }
+  } */
 
-  /*
+/*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  thead {
+/* thead {
     display: table-header-group;
   }
 
@@ -617,4 +723,4 @@ body footer ul li {
   h3 {
     page-break-after: avoid;
   }
-}
+} */
