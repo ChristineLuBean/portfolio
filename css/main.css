@@ -11,6 +11,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Merienda:wght@300;400;700;900&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 html {
   color: #222;
   font-size: 1em;
@@ -87,6 +89,384 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  overflow: hidden;
+  font-size: 62.5%;
+}
+body {
+  background: #3a1954;
+  font-family: "Rubik", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  -webkit-perspective: 1px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+body aside.parallax {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body aside.parallax:after {
+  background-image: url("/img/bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  content: "";
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+body header h1 {
+  text-align: center;
+  margin: 0px;
+  font-family: "Merienda", cursive;
+  font-size: clamp(2.93rem, 2.1vw + 2.19rem, 7.58rem);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.7);
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main.content-outer {
+  background-color: #3a1954;
+  perspective: 2px;
+  -webkit-perspective: 2px;
+}
+@media (min-width: 769px) {
+  body main div.content-inner {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  body main div.content-inner {
+    width: 80%;
+  }
+}
+body main .content-inner {
+  color: #ebd9d7;
+  line-height: 1.4em;
+  margin: 0 auto;
+  display: block;
+}
+body main .content-inner p {
+  font-size: clamp(1.2rem, 0.54vw + 1rem, 2.4rem);
+  line-height: 2em;
+  margin: 0.8em 0;
+}
+body main .content-inner header {
+  display: flex;
+  gap: 1.2em;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
+  margin: 3em 0 4em 0;
+}
+body main .content-inner header:hover .portrait {
+  box-shadow: 0 0 20px hsla(43deg, 80%, 82%, 0.8);
+}
+body main .content-inner header .portrait {
+  width: 6.5em;
+  height: 6.5em;
+  border: 0.3em solid #f8e6a9;
+  border-radius: 50%;
+  background-image: url("/img/myProfessionalPicture.png");
+  background-size: cover;
+  transition: box-shadow 300ms;
+}
+body main .content-inner header h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
+  font-weight: 500;
+  line-height: 1.25em;
+  color: #e7bade;
+  transition: text-shadow 300ms;
+}
+body main .content-inner header h2 strong {
+  font-family: "Merienda", cursive;
+  font-size: 1.5em;
+  color: #c744c7;
+  font-weight: 700;
+}
+body main .content-inner #portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3em 3em;
+  margin: 0 0 4em 0;
+}
+body main .content-inner #portfolio div#pic-div1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+body main .content-inner #portfolio div#pic-div2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+body main .content-inner #portfolio div#pic-div3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+body main .content-inner #portfolio div#pic-div4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+body main .content-inner #portfolio div#pic-div5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+body main .content-inner #portfolio div#pic-div6 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+body main .content-inner #portfolio div article {
+  padding: 1.7em;
+  border-radius: 2px;
+  transition: all ease-in-out 500ms;
+  color: hsla(15deg, 40%, 98%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+body main .content-inner #portfolio div article#pic1 {
+  background: url("/img/01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main .content-inner #portfolio div article#pic2 {
+  background: url("/img/02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main .content-inner #portfolio div article#pic3 {
+  background: url("/img/03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main .content-inner #portfolio div article#pic4 {
+  background: url("/img/04.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main .content-inner #portfolio div article#pic5 {
+  background: url("/img/05.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main .content-inner #portfolio div article#pic6 {
+  background: url("/img/06.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main .content-inner #portfolio div article h4 {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
+  line-height: 1.2em;
+  margin: 1em 0 0.5em 0;
+}
+body main .content-inner #portfolio div article p {
+  font-size: clamp(0.96rem, 0.38vw + 0.83rem, 1.8rem);
+  margin: 1em 0;
+  line-height: 2em;
+}
+body main .content-inner #portfolio div article:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+  box-shadow: 0 10px 20px -10px rgb(0, 0, 0);
+}
+body .btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  margin: 2em auto 3em auto;
+  font-family: "Assistant", sans-serif;
+}
+@media (min-width: 951px) {
+  body .btn {
+    font-size: clamp(1.5rem, 0.77vw + 1.23rem, 3.2rem);
+  }
+}
+@media (max-width: 950px) {
+  body .btn {
+    font-size: clamp(1.88rem, 1.08vw + 1.5rem, 4.26rem);
+  }
+}
+body .btn.learn-more {
+  width: 10em;
+  height: auto;
+}
+body .btn.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 1.65em;
+  height: 1.65em;
+  background: #f8e6a9;
+  border-radius: 1.625rem;
+}
+body .btn.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #934394;
+}
+body .btn.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+body .btn.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #3a1954;
+  border-right: 0.125rem solid #3a1954;
+  transform: rotate(45deg);
+}
+body .btn.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0 0 0 1.2em;
+  color: #f8e6a9;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+body .btn:hover .circle {
+  width: 100%;
+  background: #f8e6a9;
+  box-shadow: 0 0 15px hsla(43deg, 80%, 82%, 0.6);
+}
+body .btn:hover .circle .icon.arrow {
+  background: #3a1954;
+  transform: translate(1em, 0);
+}
+body .btn:hover .button-text {
+  color: #3a1954;
+}
+body h3 {
+  font-size: clamp(2.34rem, 1.51vw + 1.81rem, 5.68rem);
+  font-family: "Assistant", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin: 2em 0;
+}
+body h3:hover {
+  text-shadow: 0 0 10px hsla(43deg, 80%, 82%, 0.8);
+}
+body footer {
+  font-size: clamp(0.96rem, 0.38vw + 0.83rem, 1.8rem);
+  color: #ebd9d7;
+  padding-bottom: 3em;
+}
+@media (max-width: 950px) {
+  body footer {
+    padding-bottom: 6em;
+  }
+}
+body footer .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: clamp(1.88rem, 1.08vw + 1.5rem, 4.26rem);
+  gap: 1em;
+  list-style: none;
+  margin-bottom: 1em;
+}
+body footer .icons .icon {
+  transition: all ease-in-out 250ms;
+  color: #c682e4;
+}
+body footer .icons .icon:hover {
+  color: #f8e6a9;
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #c682e4);
+}
+body footer strong {
+  font-size: 1.1em;
+}
+body footer strong a {
+  color: rgba(0, 0, 0, 0);
+  padding-bottom: 0.1em;
+  background: linear-gradient(90deg, #f8e6a9 50%, #c744c7 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(#f8e6a9 0 0) 0% 100% / var(--_p, 0%) 0.1em no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body footer strong a:hover {
+  --_p: 100%;
+  text-shadow: 0 0 10px hsla(43deg, 80%, 82%, 0.8);
+}
+body footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+body footer ul li {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 0.25em;
+  margin: 0.25em 0;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -145,28 +525,6 @@ textarea {
 
 .invisible {
   visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
 }
 
 /* ==========================================================================
@@ -260,4 +618,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-

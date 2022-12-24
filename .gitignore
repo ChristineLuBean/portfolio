@@ -4,3 +4,7 @@
 node_modules
 dist
 .cache
+.eslint
+.prettier
+.editorconfig
+package-lock.json
