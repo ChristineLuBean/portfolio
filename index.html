@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <title>Christine LuBean</title>
-    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-
-    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
 
     <link
       id="google-fonts-toucan"
@@ -19,54 +19,69 @@
       type="text/css"
       href="https://fonts.googleapis.com/css?family=Karla:400,700|Lora:700&amp;display=swap"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/refactored.css" />
-
-    <!-- <script
-      src="https://kit.fontawesome.com/d4cd10afa8.js"
-      crossorigin="anonymous"
-    ></script> -->
-
-
-    <!-- <meta name="theme-color" content="#3a1954" /> -->
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="universal-parallax.min.css" />
   </head>
-
-  <body class="is-preload">
-
-    <nav id="navigation-bar" class="navigation-menu-collapsed">
-
-      <div class="navigation-bar-toggle" onclick="toggleMenu()">
-
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbarNav"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
+    <nav id="navigation-bar" class="fixed-top navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse justify-content-center navbar-collapse"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav nav-pills text-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul id="navigation-menu">
-        <li><a href="#hero-section">Home</a></li>
-        <li><a href="#bio-section">Bio</a></li>
-        <li><a href="#resume-section">Resume</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#blog-section">Blog</a></li>
-        <li><a href="#contact-section">Contact</a></li>
-      </ul>
     </nav>
-    <aside class="parallax">
-      <header>
-        <h1>I make. I write. I hack.</h1>
-      </header>
-    </aside>
-
-    <main class="content-outer">
-      <div class="content-inner">
-        <header class="fade-in">
-          <div class="portrait"></div>
+    <header id="home">
+      <div class="parallax"></div>
+      <h1 class="display-1">I make. I write. I hack.</h1>
+    </header>
+    <main>
+      <div id="main" class="container pt-5">
+        <section class="fade-in d-flex justify-content-center my-5">
+          <div id="portrait" class="mx-4"></div>
           <h2>
             <strong>Christine LuBean</strong>
             <br />writer, software engineer, <br />& ethical hacker
           </h2>
-        </header>
-
-        <section id="introduction">
+        </section>
+        <section id="about" class="container-fluid">
           <p class="fade-in">
             My love of solving problems and learning how things work led me to
             teaching myself how to create websites when I was 11. I went from a
@@ -86,128 +101,153 @@
             wanted. It combines my love of tech with my passion for research and
             writing.
           </p>
-
-
           <p class="fade-in">
             I'm an ethical hacker who wants to go beyond just preventing
             exploits. I want to improve the internet by securing webpages,
             applications, and teaching people how to be safe while they browse
-            online.
+            online. I believe that it is important to not only fix problems when
+            they arise, but also to educate and prevent them from happening in
+            the first place.
           </p>
-          <p class="fade-in">
-            When I’m not writing, coding, or hacking, I’m either creating
-            digital illustrations, or I'm playing video games with my husband
-            while being harassed by my two cats.
-          </p>
-          <a href="#" class="btn learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Learn More</span>
-          </a>
         </section>
-        <h3 class="fade-in">Recent Work</h3>
-        <section id="portfolio" class="fade-in">
-          <div id="pic-div1">
-            <article id="pic1">
-              <a href="#" class="image fit thumb">
 
-              </a>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, suscipit!
-              </p>
-            </article>
+        <section id="resume" class="container-fluid">
+          <h2 class="fade-in">Resume</h2>
+          <p class="fade-in">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
+            lacus at mauris dictum, eget auctor lorem aliquet. Curabitur
+            eleifend, lectus at sollicitudin accumsan, velit sem iaculis dui,
+            sit amet malesuada lectus urna quis eros. In efficitur urna eget
+            dolor dictum, ac dictum purus sollicitudin. Quisque auctor placerat
+            nisi, eu dignissim nunc condimentum eu. Suspendisse in aliquam
+            metus, non aliquam nisi.
+          </p>
+        </section>
+        <section id="projects" class="container-fluid">
+          <h2 class="fade-in">Projects</h2>
+          <div id="project-gallery" class="fade-in container px-3 md">
+            <div class="row gx-5 gy-5">
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div1" class="card">
+                  <img src="/img/01.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div2" class="card">
+                  <img src="/img/02.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div3" class="card">
+                  <img src="/img/03.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div4" class="card">
+                  <img src="/img/04.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div5" class="card">
+                  <img src="/img/05.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div6" class="card">
+                  <img src="/img/06.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p cla7ss="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
-          <div id="pic-div2">
-            <article id="pic2">
-              <a href="#" class="image fit thumb">
-
-              </a>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, suscipit!
-              </p>
-            </article>
-          </div>
-          <div id="pic-div3">
-            <article id="pic3">
-              <a href="#" class="image fit thumb">
-
-              </a>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, suscipit!
-              </p>
-            </article>
-          </div>
-
-          <div id="pic-div4">
-            <article id="pic4">
-              <a href="#" class="image fit thumb">
-
-              </a>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, suscipit!
-              </p>
-            </article>
-          </div>
-          <div id="pic-div5">
-            <article id="pic5">
-              <a href="#" class="image fit thumb">
-
-              </a>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, suscipit!
-              </p>
-            </article>
-          </div>
-          <div id="pic-div6">
-            <article id="pic6">
-              <a href="#" class="image fit thumb">
-
-              </a>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, suscipit!
-              </p>
-            </article>
-          </div>
+        </section>
+        <section id="blog" class="container-fluid">
+          <h2 class="fade-in">Blog</h2>
+          <p class="fade-in">
+            at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
+            lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
+            malesuada lectus urna quis eros. In efficitur urna eget dolor
+            dictum, ac dictum purus sollicitudin. Quisque auctor placerat nisi,
+            eu dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
+            aliquam nisi.
+          </p>
+        </section>
+        <section id="contact" class="container-fluid">
+          <h2 class="fade-in">Contact</h2>
+          <p class="fade-in">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
+            lacus at mauris dictum, eget auctor lorem aliquet. Curabitur
+            eleifend, lectus at sollicitudin accumsan, velit sem iaculis dui,
+            sit amet malesuada lectus urna quis eros. In efficitur urna eget
+            dolor dictum, ac dictum purus sollicitudin. Quisque auctor placerat
+            nisi, eu dignissim nunc condimentum eu. Suspendisse in aliquam
+            metus, non aliquam nisi.
+          </p>
         </section>
       </div>
+
+      <footer class="fade-in">
+        <p>Copyright 2021 Christine LuBean</p>
+        <p>Design by Codandelion Designs</p>
+      </footer>
     </main>
-    <footer class="fade-in">
-      <section id="social">
-        <ul class="social-media icons">
-          <li>
-            <a href="#"><i class="icon fa-brands fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="icon fa-brands fa-mastodon"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="icon fa-brands fa-github"></i></a>
-          </li>
-        </ul>
-      </section>
-      <ul class="copyright">
-        <li>Christine LuBean &copy; 2022</li>
-        <li>
-          Designed by
-          <strong
-            ><a class="textwrapper" href="#">Codandelion Designs</a></strong
-          >
-        </li>
-      </ul>
-    </footer>
-    <script src="js/main.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+    <script src="universal-parallax.min.js"></script>
+    <script>
+      new universalParallax().init();
+    </script>
   </body>
 </html>

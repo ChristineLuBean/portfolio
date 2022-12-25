@@ -36,7 +36,8 @@ body {
 }
 
 body,
-main {
+main,
+footer {
   background-color: #3a1954;
 }
 
@@ -87,31 +88,6 @@ nav.navbar {
   }
 }
 
-.parallax {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
-
-  &::after {
-    background-image: url("/img/bg.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: -1;
-    content: "";
-  }
-}
 
 main {
   z-index: 2;
@@ -148,4 +124,44 @@ section {
   background-image: url("/img/myProfessionalPicture.png");
   background-size: cover;
   transition: box-shadow 300ms;
+}
+
+#home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  h1 {
+    position: absolute;
+  }
+}
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+
+.parallax {
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+  background-image: url("/img/bg.png");
+
+	/* BG behaviour */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
