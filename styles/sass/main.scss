@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @import "./vars.scss";
 
+.fade-in {
+  /* Add a transition to the opacity property */
+  transition: opacity 0.3s;
+  /* Set the initial opacity to 0 */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+
+.fade-in.visible {
+  /* When the element is visible in the viewport, set the opacity to 1 */
+  opacity: 1;
+}
+
 body {
   section>p {
     color: white;
@@ -26,6 +40,13 @@ main {
   background-color: #3a1954;
 }
 
+#navigation-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+
 nav.navbar {
   background: hsla(271, 76%, 60%, .65);
 
@@ -33,8 +54,12 @@ nav.navbar {
     color: white;
     font-family: $display-font-family;
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     transition: all ease-in 200ms;
+
+    &:active {
+      color: white;
+    }
 
     &:hover {
       color: white;
@@ -49,6 +74,16 @@ nav.navbar {
         text-shadow: none;
       }
     }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #navigation-bar.scrolled {
+    background-color: #c482e6;
+  }
+
+  #navigation-bar.hidden {
+    top: -5.3rem;
   }
 }
 
