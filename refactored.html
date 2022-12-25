@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/refactored.css" />
+    <link rel="stylesheet" href="styles/css/main.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,8 +21,13 @@
       href="https://fonts.googleapis.com/css?family=Karla:400,700|Lora:700&amp;display=swap"
     />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbarNav"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
+    <nav class="fixed-top navbar navbar-expand-lg">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -35,197 +40,204 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse justify-content-center navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav text-center">
+        <div
+          class="collapse justify-content-center navbar-collapse"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav nav-pills text-center">
             <li class="nav-item">
-              <a class="nav-link active" href="#hero-section">Home</a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#bio-section">Bio</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#resume-section">Resume</a>
+              <a class="nav-link" href="#resume">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects-section">Projects</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#blog-section">Blog</a>
+              <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact-section">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <header class="container-fluid text-center parallax">
-      <h1 class="display-1">I make. I write. I hack.</h1>
+    <header id="home">
+      <div class="parallax">
+        <h1 class="display-1">I make. I write. I hack.</h1>
+      </div>
     </header>
-    <main class="container-fluid">
-      <section id="intro" class="container-fluid">
-        <p>
-          My love of solving problems and learning how things work led me to
-          teaching myself how to create websites when I was 11. I went from a
-          kid with a beaten up HTML manual to a full-stack developer over the
-          course of my teenage and young adulthood years. When I was designing
-          websites, I began keeping a personal blog, and this, along with my
-          love of reading, inspired me to study English in college.
-        </p>
-        <p>
-          It wasn’t until after finishing my degree that I discovered a passion
-          for cyber security. Although I did web development on the side, it was
-          during the 2020 pandemic that I decided to go into tech full-time. My
-          dad--who is a system administrator--found out I was finally fully
-          committed to working in tech and began spamming me with articles about
-          cyber security. While I dismissed cyber initially, after looking
-          closer I discovered it was exactly what I wanted. It combines my love
-          of tech with my passion for research and writing.
-        </p>
-        <p>
-          I'm an ethical hacker who wants to go beyond just preventing exploits.
-          I want to improve the internet by securing webpages, applications, and
-          teaching people how to be safe while they browse online. I believe
-          that it is important to not only fix problems when they arise, but
-          also to educate and prevent them from happening in the first place.
-        </p>
-      </section>
-      <section id="bio" class="container-fluid">
-        <h2>Bio</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
-          lacus at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
-          lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
-          malesuada lectus urna quis eros. In efficitur urna eget dolor dictum,
-          ac dictum purus sollicitudin. Quisque auctor placerat nisi, eu
-          dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
-          aliquam nisi.
-        </p>
-      </section>
-      <section id="resume" class="container-fluid">
-        <h2>Resume</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
-          lacus at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
-          lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
-          malesuada lectus urna quis eros. In efficitur urna eget dolor dictum,
-          ac dictum purus sollicitudin. Quisque auctor placerat nisi, eu
-          dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
-          aliquam nisi.
-        </p>
-      </section>
-      <section id="projects" class="container-fluid">
-        <h2>Projects</h2>
-        <div id="project-gallery" class="container px-3 md">
-          <div class="row gx-5 gy-5">
-            <div class="col-xl-4 col-md-6">
-              <article id="pic-div1" class="card">
-                <img src="/img/01.jpg" class="card-img-top" alt="" />
-                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
-                <div class="card-body">
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus, suscipit!
-                  </p>
-                  <a href="#" class="btn btn-primary">Learn more</a>
-                </div>
-              </article>
-            </div>
-            <div class="col-xl-4 col-md-6">
-              <article id="pic-div2" class="card">
-                <img src="/img/02.jpg" class="card-img-top" alt="" />
-                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
-                <div class="card-body">
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.Accusamus, suscipit!
-                  </p>
-                  <a href="#" class="btn btn-primary">Learn more</a>
-                </div>
-              </article>
-            </div>
-            <div class="col-xl-4 col-md-6">
-              <article id="pic-div3" class="card">
-                <img src="/img/03.jpg" class="card-img-top" alt="" />
-                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
-                <div class="card-body">
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus, suscipit!
-                  </p>
-                  <a href="#" class="btn btn-primary">Learn more</a>
-                </div>
-              </article>
-            </div>
-            <div class="col-xl-4 col-md-6">
-              <article id="pic-div4" class="card">
-                <img src="/img/04.jpg" class="card-img-top" alt="" />
-                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
-                <div class="card-body">
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus, suscipit!
-                  </p>
-                  <a href="#" class="btn btn-primary">Learn more</a>
-                </div>
-              </article>
-            </div>
-            <div class="col-xl-4 col-md-6">
-              <article id="pic-div5" class="card">
-                <img src="/img/05.jpg" class="card-img-top" alt="" />
-                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
-                <div class="card-body">
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus, suscipit!
-                  </p>
-                  <a href="#" class="btn btn-primary">Learn more</a>
-                </div>
-              </article>
-            </div>
-            <div class="col-xl-4 col-md-6">
-              <article id="pic-div6" class="card">
-                <img src="/img/06.jpg" class="card-img-top" alt="" />
-                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
-                <div class="card-body">
-                  <p cla7ss="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus, suscipit!
-                  </p>
-                  <a href="#" class="btn btn-primary">Learn more</a>
-                </div>
-              </article>
+    <main>
+      <div id="main" class="container pt-5">
+        <section class="fade-in d-flex justify-content-center my-5">
+          <div id="portrait" class="mx-4"></div>
+          <h2>
+            <strong>Christine LuBean</strong>
+            <br />writer, software engineer, <br />& ethical hacker
+          </h2>
+        </section>
+        <section id="about" class="container-fluid">
+          <p>
+            My love of solving problems and learning how things work led me to
+            teaching myself how to create websites when I was 11. I went from a
+            kid with a beaten up HTML manual to a full-stack developer over the
+            course of my teenage and young adulthood years. When I was designing
+            websites, I began keeping a personal blog, and this, along with my
+            love of reading, inspired me to study English in college.
+          </p>
+          <p>
+            It wasn’t until after finishing my degree that I discovered a
+            passion for cyber security. Although I did web development on the
+            side, it was during the 2020 pandemic that I decided to go into tech
+            full-time. My dad--who is a system administrator--found out I was
+            finally fully committed to working in tech and began spamming me
+            with articles about cyber security. While I dismissed cyber
+            initially, after looking closer I discovered it was exactly what I
+            wanted. It combines my love of tech with my passion for research and
+            writing.
+          </p>
+          <p>
+            I'm an ethical hacker who wants to go beyond just preventing
+            exploits. I want to improve the internet by securing webpages,
+            applications, and teaching people how to be safe while they browse
+            online. I believe that it is important to not only fix problems when
+            they arise, but also to educate and prevent them from happening in
+            the first place.
+          </p>
+        </section>
+
+        <section id="resume" class="container-fluid">
+          <h2>Resume</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
+            lacus at mauris dictum, eget auctor lorem aliquet. Curabitur
+            eleifend, lectus at sollicitudin accumsan, velit sem iaculis dui,
+            sit amet malesuada lectus urna quis eros. In efficitur urna eget
+            dolor dictum, ac dictum purus sollicitudin. Quisque auctor placerat
+            nisi, eu dignissim nunc condimentum eu. Suspendisse in aliquam
+            metus, non aliquam nisi.
+          </p>
+        </section>
+        <section id="projects" class="container-fluid">
+          <h2>Projects</h2>
+          <div id="project-gallery" class="container px-3 md">
+            <div class="row gx-5 gy-5">
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div1" class="card">
+                  <img src="/img/01.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div2" class="card">
+                  <img src="/img/02.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div3" class="card">
+                  <img src="/img/03.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div4" class="card">
+                  <img src="/img/04.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div5" class="card">
+                  <img src="/img/05.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div6" class="card">
+                  <img src="/img/06.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p cla7ss="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="blog" class="container-fluid">
-        <p>
-          at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
-          lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
-          malesuada lectus urna quis eros. In efficitur urna eget dolor dictum,
-          ac dictum purus sollicitudin. Quisque auctor placerat nisi, eu
-          dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
-          aliquam nisi.
-        </p>
-      </section>
-      <section id="contact" class="container-fluid">
-        <h2>Contact</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
-          lacus at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
-          lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
-          malesuada lectus urna quis eros. In efficitur urna eget dolor dictum,
-          ac dictum purus sollicitudin. Quisque auctor placerat nisi, eu
-          dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
-          aliquam nisi.
-        </p>
-      </section>
+        </section>
+        <section id="blog" class="container-fluid">
+          <h2>Blog</h2>
+          <p>
+            at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
+            lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
+            malesuada lectus urna quis eros. In efficitur urna eget dolor
+            dictum, ac dictum purus sollicitudin. Quisque auctor placerat nisi,
+            eu dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
+            aliquam nisi.
+          </p>
+        </section>
+        <section id="contact" class="container-fluid">
+          <h2>Contact</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
+            lacus at mauris dictum, eget auctor lorem aliquet. Curabitur
+            eleifend, lectus at sollicitudin accumsan, velit sem iaculis dui,
+            sit amet malesuada lectus urna quis eros. In efficitur urna eget
+            dolor dictum, ac dictum purus sollicitudin. Quisque auctor placerat
+            nisi, eu dignissim nunc condimentum eu. Suspendisse in aliquam
+            metus, non aliquam nisi.
+          </p>
+        </section>
+      </div>
+
+      <footer>
+        <p>Copyright 2021 Christine LuBean</p>
+        <p>Design by Codandelion Designs</p>
+      </footer>
     </main>
-    <footer>
-      <p>Copyright 2021 Christine LuBean</p>
-      <p>Design by Codandelion Designs</p>
-    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
