@@ -5,7 +5,7 @@
     <title>Christine LuBean</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="styles/css/normalize.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,8 +19,11 @@
       type="text/css"
       href="https://fonts.googleapis.com/css?family=Karla:400,700|Lora:700&amp;display=swap"
     />
+    <link
+      href="node_modules/universal-parallax/dist/universal-parallax.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/css/main.css" />
-    <link rel="stylesheet" href="universal-parallax.min.css" />
   </head>
   <body
     data-bs-spy="scroll"
@@ -69,13 +72,16 @@
       </div>
     </nav>
     <header id="home">
-      <div class="parallax"></div>
+      <div class="parallax" data-parallax-image="/img/bg.png"></div>
       <h1 class="display-1">I make. I write. I hack.</h1>
     </header>
     <main>
       <div id="main" class="container pt-5">
-        <section class="fade-in d-flex justify-content-center my-5">
-          <div id="portrait" class="mx-4"></div>
+        <section
+          id="name"
+          class="fade-in d-flex justify-content-center align-items-center gap-4 my-5"
+        >
+          <div id="portrait"></div>
           <h2>
             <strong>Christine LuBean</strong>
             <br />writer, software engineer, <br />& ethical hacker
@@ -233,9 +239,9 @@
         </section>
       </div>
 
-      <footer class="fade-in">
+      <footer class="fade-in text-center">
         <p>Copyright 2021 Christine LuBean</p>
-        <p>Design by Codandelion Designs</p>
+        <p>Site by <a href="https://codandelion.com/">Codandelion Designs</a></p>
       </footer>
     </main>
 
@@ -245,9 +251,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/main.js"></script>
-    <script src="universal-parallax.min.js"></script>
+    <script src="node_modules/universal-parallax/dist/universal-parallax.min.js"></script>
     <script>
-      new universalParallax().init();
+      new universalParallax().init({
+        speed: 5.0,
+      });
     </script>
   </body>
 </html>

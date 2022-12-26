@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @import "./vars.scss";
 
+
+
 .fade-in {
   /* Add a transition to the opacity property */
   transition: opacity 0.3s;
@@ -16,6 +18,8 @@
 }
 
 body {
+  font-size: 1.3rem;
+
   section>p {
     color: white;
     line-height: 1.8em;
@@ -45,11 +49,12 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  transition: all 0.3s;
+  transition: text-shadow ease 300ms;
+  transition: background ease-in-out 500ms;
 }
 
 nav.navbar {
-  background: hsla(271, 76%, 60%, .65);
+  background: hsla(271, 76%, 60%, .35);
 
   a {
     color: white;
@@ -58,7 +63,8 @@ nav.navbar {
     font-size: 2.2rem;
     transition: all ease-in 200ms;
 
-    &:active {
+    &:active,
+    &:focus {
       color: white;
     }
 
@@ -76,11 +82,19 @@ nav.navbar {
       }
     }
   }
+
+  .nav-pills {
+    --bs-nav-pills-link-active-bg: #bd87c9;
+  }
 }
 
 @media screen and (min-width: 800px) {
   #navigation-bar.scrolled {
-    background-color: #c482e6;
+    background-color: #bd87c9;
+
+    .nav-pills {
+      --bs-nav-pills-link-active-bg: #91179f;
+    }
   }
 
   #navigation-bar.hidden {
@@ -100,6 +114,13 @@ h4,
 h5,
 h6 {
   font-family: $header-font-family;
+  font-weight: 900;
+}
+
+#name {
+  h2 {
+    font-weight: 400;
+  }
 }
 
 h1.display-1 {
@@ -116,15 +137,7 @@ section {
   }
 }
 
-#portrait {
-  width: 6.5em;
-  height: 6.5em;
-  border: 0.3em solid #f8e6a9;
-  border-radius: 50%;
-  background-image: url("/img/myProfessionalPicture.png");
-  background-size: cover;
-  transition: box-shadow 300ms;
-}
+
 
 #home {
   position: relative;
@@ -139,29 +152,35 @@ section {
   }
 }
 
-.parallax__container {
-	clip: rect(0, auto, auto, 0);
-	height: 100%;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: -100;
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #91179f;
+  --bs-btn-border-color: #91179f;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #c745c7;
+  --bs-btn-hover-border-color: #c745c7;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #91179f;
+  --bs-btn-active-border-color: #91179f;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #91179f;
+  --bs-btn-disabled-border-color: #91179f;
 }
 
-.parallax {
-	position: fixed;
-	top: 0;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	width: 100%;
-  background-image: url("/img/bg.png");
+#name {
+  #portrait {
+    width: 6.5em;
+    height: 6.5em;
+    border: 0.3em solid #f8e6a9;
+    border-radius: 50%;
+    background-image: url("/img/myProfessionalPicture.png");
+    background-size: cover;
+  }
 
-	/* BG behaviour */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
 }

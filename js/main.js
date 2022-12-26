@@ -20,6 +20,17 @@ window.addEventListener('scroll', function () {
 
   lastScrollTop = currentScrollTop;
 
+  const newScrollPos = window.pageYOffset;
+  // If the user has scrolled past 100vh, add the "scrolled" class to the navbar element
+  if (newScrollPos > 1000) {
+    navBar.classList.add('scrolled');
+    console.log('navBar.classList');
+  } else {
+    navBar.classList.remove('scrolled');
+  }
+  // Update the current scroll position
+  currentScrollPos = newScrollPos;
+
   // Add the 'visible' class to sections in the viewport
   for (section of sections) {
     const rect = section.getBoundingClientRect();
