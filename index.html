@@ -1,192 +1,261 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<script src="https://kit.fontawesome.com/d4cd10afa8.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Christine LuBean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Wrapper -->
-		<div id="wrapper">
-			
-			<!-- Header -->
-			<header id="header" class="alt">
-				<section id="logoSection">
-				<span class="logo"><img src="images/logo.svg" alt="" /></span>
-				<h1 id="#logoName">Christine LuBean</h1>
-			</section>
-				<i class="fa-solid fa-arrow-down"></i>
-			</header>
+    <link rel="stylesheet" href="styles/css/normalize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="#intro" class="active">Home</a></li>
-						<li><a href="#first">Services</a></li>
-						<li><a href="#second">Portfolio</a></li>
-						<li><a href="#cta">Contact</a></li>
-					</ul>
-				</nav>
+    <link
+      id="google-fonts-toucan"
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Karla:400,700|Lora:700&amp;display=swap"
+    />
+    <link
+      href="node_modules/universal-parallax/dist/universal-parallax.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/css/main.css" />
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbarNav"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
+    <nav id="navigation-bar" class="fixed-top navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse justify-content-center navbar-collapse"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav nav-pills text-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="home">
+      <div class="parallax" data-parallax-image="/img/bg.png"></div>
+      <h1 class="display-1">I make. I write. I hack.</h1>
+    </header>
+    <main>
+      <div id="main" class="container pt-5">
+        <section
+          id="name"
+          class="fade-in d-flex justify-content-center align-items-center gap-4 my-5"
+        >
+          <div id="portrait"></div>
+          <h2>
+            <strong>Christine LuBean</strong>
+            <br />writer, software engineer, <br />& ethical hacker
+          </h2>
+        </section>
+        <section id="about" class="container-fluid">
+          <p class="fade-in">
+            My love of solving problems and learning how things work led me to
+            teaching myself how to create websites when I was 11. I went from a
+            kid with a beaten up HTML manual to a full-stack developer over the
+            course of my teenage and young adulthood years. When I was designing
+            websites, I began keeping a personal blog, and this, along with my
+            love of reading, inspired me to study English in college.
+          </p>
+          <p class="fade-in">
+            It wasn’t until after finishing my degree that I discovered a
+            passion for cyber security. Although I did web development on the
+            side, it was during the 2020 pandemic that I decided to go into tech
+            full-time. My dad--who is a system administrator--found out I was
+            finally fully committed to working in tech and began spamming me
+            with articles about cyber security. While I dismissed cyber
+            initially, after looking closer I discovered it was exactly what I
+            wanted. It combines my love of tech with my passion for research and
+            writing.
+          </p>
+          <p class="fade-in">
+            I'm an ethical hacker who wants to go beyond just preventing
+            exploits. I want to improve the internet by securing webpages,
+            applications, and teaching people how to be safe while they browse
+            online. I believe that it is important to not only fix problems when
+            they arise, but also to educate and prevent them from happening in
+            the first place.
+          </p>
+        </section>
 
-				<!-- Main -->
-				<div id="main">
+        <section id="resume" class="container-fluid">
+          <h2 class="fade-in">Resume</h2>
+          <p class="fade-in">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
+            lacus at mauris dictum, eget auctor lorem aliquet. Curabitur
+            eleifend, lectus at sollicitudin accumsan, velit sem iaculis dui,
+            sit amet malesuada lectus urna quis eros. In efficitur urna eget
+            dolor dictum, ac dictum purus sollicitudin. Quisque auctor placerat
+            nisi, eu dignissim nunc condimentum eu. Suspendisse in aliquam
+            metus, non aliquam nisi.
+          </p>
+        </section>
+        <section id="projects" class="container-fluid">
+          <h2 class="fade-in">Projects</h2>
+          <div id="project-gallery" class="fade-in container px-3 md">
+            <div class="row gx-5 gy-5">
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div1" class="card">
+                  <img src="/img/01.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div2" class="card">
+                  <img src="/img/02.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div3" class="card">
+                  <img src="/img/03.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div4" class="card">
+                  <img src="/img/04.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div5" class="card">
+                  <img src="/img/05.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <article id="pic-div6" class="card">
+                  <img src="/img/06.jpg" class="card-img-top" alt="" />
+                  <h4 class="card-title px-3 pt-3">Lorem ipsum dolor sit.</h4>
+                  <div class="card-body">
+                    <p cla7ss="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus, suscipit!
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="blog" class="container-fluid">
+          <h2 class="fade-in">Blog</h2>
+          <p class="fade-in">
+            at mauris dictum, eget auctor lorem aliquet. Curabitur eleifend,
+            lectus at sollicitudin accumsan, velit sem iaculis dui, sit amet
+            malesuada lectus urna quis eros. In efficitur urna eget dolor
+            dictum, ac dictum purus sollicitudin. Quisque auctor placerat nisi,
+            eu dignissim nunc condimentum eu. Suspendisse in aliquam metus, non
+            aliquam nisi.
+          </p>
+        </section>
+        <section id="contact" class="container-fluid">
+          <h2 class="fade-in">Contact</h2>
+          <p class="fade-in">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit
+            lacus at mauris dictum, eget auctor lorem aliquet. Curabitur
+            eleifend, lectus at sollicitudin accumsan, velit sem iaculis dui,
+            sit amet malesuada lectus urna quis eros. In efficitur urna eget
+            dolor dictum, ac dictum purus sollicitudin. Quisque auctor placerat
+            nisi, eu dignissim nunc condimentum eu. Suspendisse in aliquam
+            metus, non aliquam nisi.
+          </p>
+        </section>
+      </div>
 
-					<!-- Introduction -->
-					<section id="intro" class="main">
-						<div class="content">
-							<header class="major">
-								<h2>Hi, I'm <strong>Christine</strong>, <br>your next <br>software engineer.</h2>
-								<img src="images/pic01.png" alt="" />	
-							</header>
-						</div>
-					</section>
+      <footer class="fade-in text-center">
+        <p>Copyright 2021 Christine LuBean</p>
+        <p>Site by <a href="https://codandelion.com/">Codandelion Designs</a></p>
+      </footer>
+    </main>
 
-					<!-- First Section -->
-					<section id="first" class="main special">
-						<header class="major">
-							<h3>My Work Process</h3>
-							<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-							posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-						</header>
-						<ul class="process">
-							<li class="style1">
-								<i class="icon fa-regular fa-comment"></i>
-								<strong>Consultation</strong>
-								<p>
-									I conduct user research to identify the problem I want to solve.
-								</p>
-							</li>
-							<li class="style3">
-								<span class="icon fa-copy"></span>
-								<strong>Proposal</strong> 
-								<p>	I brainstorm possible design solutions to the identified problem.
-									I create wireframes and sketches of the product I’m about to design.
-								</p>
-							</li>
-							<li class="style4">
-								<span class="icon solid fa-laptop"></span>
-								<strong>Creation</strong> 
-								<p>
-									I create high fidelity design and prototype the screens.
-								</p>
-							</li>
-							<li class="style5">
-								<i class="icon fa-regular fa-paper-plane"></i>
-								<strong>Implement</strong> 
-								<p>
-									After designing, I deliver for implementation.
-								</p>
-							</li>
-						</ul>
-
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</footer>
-					</section>
-
-					<!-- Second Section -->
-					<section id="second" class="main special">
-						<header class="major">
-							<h3>My Latest Projects</h3>
-						</header>
-						<ul class="features">
-							<li>
-								<div id="layout1" class="col-4"></div>
-								<a href="#" class="button small">View</a>
-							</li>
-							<li>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<h4>Title</h4>
-								<p>
-									Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate.
-								</p>
-								<a href="#" class="button small">View</a>
-							</li>
-							<li>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<h4>Title</h4>
-								<p>
-									Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate.
-								</p>
-								<a href="#" class="button small">View</a>
-							</li>
-						</ul>
-					</section>
-
-					<!-- Get Started -->
-					<section id="cta" class="main special">
-						<section class="major">
-							<h3>Let's connect!</h3>
-								<p>
-									I am currently accepting new freelance clients and would love to work on your projects and bring your ideas to life. I am just a click away.
-								</p>
-							<section id="contactMe" class="row gtr-uniform">
-							<section class="col-4 col-12-xsmall" id="contactInfo">
-								<ul id="contactIcons">
-									<li><i class="fa-solid fa-location-dot"></i> Central Washington</li>
-									<li><i class="fa-regular fa-envelope"></i> christinemlubean@gmail.com</li>
-									<li><i class="fa-solid fa-voicemail"></i> +1-000-000-0000</li>
-								</ul>
-							</section>
-										
-							<section class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-										</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</form>
-							</section>
-						</section>
-					</section>
-				</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-
-						<section>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">Linked In</span></a></li>
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Christine LuBean. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>	
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+    <script src="node_modules/universal-parallax/dist/universal-parallax.min.js"></script>
+    <script>
+      new universalParallax().init({
+        speed: 5.0,
+      });
+    </script>
+  </body>
+</html>
