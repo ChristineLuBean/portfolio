@@ -1,0 +1,265 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+*, h1, h2, h3 {
+     margin: 0;
+     padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+     font: 16px 'Lato', sans-serif;
+}
+body {
+     background-color:#ecdeeb;
+     background-color: hsl(304, 28%, 89%);
+     text-align: center;
+}
+.socialMediaBox {
+     display: none;
+     background-color: white;
+}
+header {
+     color: white;
+}
+h1 {
+     font: 2.5rem 'Quicksand', sans-serif;
+     font-weight: 500;
+     position: relative; 
+}
+h2 {
+     color: white;
+     font: 1.3rem 'Chilanka', cursive;
+     position: relative; 
+}
+
+.userIcon {
+     border: white solid 5px;
+     background-color: white;
+}
+h3 {
+     color: hsl(240, 23%, 55%);
+     font-size: 0.85rem;
+}
+li, .button {
+     font-size: 0.9rem;
+     border-radius: 10px;
+}
+li a {
+     text-decoration: none;
+     color: white;
+}
+
+ }
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+     display: flex;
+}
+.center {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+header {
+     width: 100%;
+     height: 235px;
+}
+.headerImage {
+     width: 100%;
+     height: 100%;
+     position: relative;
+}
+main {
+     width: 100%;
+     height: 70%;
+     margin-top: 15%;
+}
+
+ul, li {
+     list-style-type: none;
+}
+ul { 
+     padding: 5% 0 5% 0;
+     width: 80%;
+     height: auto;
+}
+li {
+     width: 100%;
+     height: auto;
+     margin-bottom: 3%;
+}
+
+.button {
+     width: 100%;
+     height: 100%;
+     padding: 0.8rem 0;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-device-width: 360px) {
+h2 {
+     display: none;
+}
+
+}
+@media screen and (max-device-width: 375px) {
+
+     /******************************************
+     /* BASE STYLES MOBILE
+     /*******************************************/
+body {
+     background-color: white;
+}
+.socialMediaBox {
+     background-color: unset;
+}
+header {
+     background-color: hsl(316, 52%, 35%);
+}
+.button {
+     background-color: hsl(316, 52%, 35%);
+}
+     /******************************************
+     /* LAYOUT MOBILE
+     /*******************************************/
+     .socialMediaBox{
+          min-width: 280px;
+          margin-top:0;
+          padding-top: 0;
+     }
+     header {
+          margin-bottom: 15px;
+     }
+
+     .userIcon {
+          border-radius: 50%;
+          width: 95px;
+          height: 95px;
+          position: absolute;
+          top: 190px;
+     }
+     img {
+          width: 85px;
+          height: 85px;
+     }     
+     /******************************************
+     /* ADDITIONAL STYLES MOBILE
+     /*******************************************/
+
+}
+
+@media screen and (min-device-width: 376px) {
+
+     /******************************************
+     /* BASE STYLES DESKTOP
+     /*******************************************/
+body {
+
+     background: url(../assets/background.png) no-repeat top/cover;
+     background-attachment: fixed;
+}
+.socialMediaBox {
+     box-shadow: 0 20px 35px -20px hsl(240, 23%, 55%);
+}
+h1 {
+     text-shadow: 2px 3px 3px hsla(0, 0%, 0%, 0.2);
+}
+h2 {
+     text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.4);
+}
+.headerImage {
+     background: radial-gradient(2000px circle at 35% 450%, hsl(356, 39%, 59%) 41%, hsl(316, 60%, 35%) 45%, hsl(266, 60%, 26%) 52%, hsl(239, 49%, 25%) 55%);
+}
+#triangleDown {
+     width: 45%;
+     height: 45%;
+     background: linear-gradient(to left, hsl(237, 41%, 39%, 0.8), hsla(300, 35%, 50%, 0.8));;
+     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+     position: absolute; 
+     right: 3%;
+     top: 0;
+   }
+#triangleUp {
+     width: 70%;
+     height: 70%;
+     background: linear-gradient(to left, hsl(237, 41%, 39%, 0.8), hsla(300, 35%, 50%, 0.8));;
+     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+     position: absolute;
+     left: 1%;
+     bottom: 0;
+   }
+   #smallTriangleUp {
+     width: 33%;
+     height: 33%;
+     background: linear-gradient(to right, hsla(347, 34%, 95%, .1) 25%, hsla(347, 34%, 70%, 0.9));
+     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+     position: absolute;
+     left: 42%;
+     bottom: 0;
+   }
+   .userIcon {
+     width: 25%;
+     height: auto;
+     }
+   .button {
+     background: linear-gradient(hsl(316, 52%, 35%), hsl(337, 39%, 51%));
+     }
+     .button:hover {
+     background: linear-gradient(hsl(270, 56%, 27%), hsl(316, 52%, 35%));
+     }
+     /******************************************
+     /* LAYOUT DESKTOP
+     /*******************************************/
+     body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2% 0;
+     }
+     .socialMediaBox {
+          border-radius: 25px;
+          overflow: hidden;
+          width: 375px;
+          min-width: 375px;
+          height: auto;
+     }
+     .userIcon {
+          border-radius: 50%;
+          width: 25%;
+          height: auto;
+          position: relative;
+          margin: -13%;
+          bottom: 0;
+     }
+     img {
+          width: 100%;
+          height: auto;
+     }
+     /******************************************
+     /* ADDITIONAL STYLES DESKTOP
+     /*******************************************/
+
+}
