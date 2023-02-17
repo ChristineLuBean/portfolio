@@ -1,0 +1,142 @@
+:root {
+  font-size: 62.5%;
+  --y: 0;
+
+}
+$contact-card-bg: #3d1b6a;
+$button-text-color: #d3dbe2;
+$button-hover-text-color: #fff;
+$button-font-size: 2.4rem;
+$button-element-spacing-vertical: 1.2rem;
+$button-element-spacing-horizontal: 2.6rem;
+$button-border-radius: 0.75em;
+$button-background-color: hsl(239, 49%, 25%);
+$button-gradient: linear-gradient(
+  hsla(0, 0%, 0%, 0) 1%,
+  hsl(266, 60%, 26%) 50%,
+  hsl(316, 60%, 35%) 80%,
+  hsl(356, 39%, 59%) 95%
+  );
+$button-box-shadow: 0 0em 1em -0.5em rgba(255, 255, 255, 0.4);
+$button-hover-box-shadow: 0 0.4em 1.1em -0.3em rgba(248, 230, 169, 1);
+$transition: 650ms ease-in-out;
+
+
+body,
+main,
+section,
+ul,
+nav,
+li {
+  display: flex !important;
+}
+
+section,
+ul {
+  flex-direction: column;
+}
+
+main,
+section,
+ul {
+  align-items: center;
+}
+
+main,
+li {
+  justify-content: center;
+}
+
+// aside,
+// nav,
+// ul,
+li,
+li a {
+  width: 100%;
+}
+
+h1,
+h2,
+ul,
+li,
+nav {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+header, aside {
+  margin-top: 0.75em;
+  margin-bottom: 0;
+}
+
+h1 {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  font-family: var(--cousine);
+  text-align: center;
+  font-size: var(--header-font-size);
+  letter-spacing: .005em;
+  i {
+    font-family: var(--karla);
+    font-style: normal;
+    font-size: 1.2em;
+    margin-right: .1em;
+  }
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  font-family: var(--amatic-sc);
+  text-align: center;
+  font-size: var(--subheader-font-size);
+  letter-spacing: .04rem;
+
+}
+
+.profile-image {
+  border: 5px solid #f8e4aa;
+  background-color: #f8e4aa;
+  border-radius: 50%;
+  overflow: hidden;
+  width: calc(15rem + 1vw);
+  aspect-ratio: 1 / 1;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+nav {
+  ul {
+    row-gap: .4em;
+  }
+
+  [role="button"] {
+    padding:  $button-element-spacing-vertical
+      $button-element-spacing-horizontal;
+    border: none;
+    border-radius: $button-border-radius;
+    color: $button-text-color;
+    font-size: $button-font-size;
+    text-align: center;
+    cursor: pointer;
+    background: 100% var(--y) / 100% 200%  no-repeat $button-gradient, $button-background-color;
+    box-shadow: $button-box-shadow;
+    transition:
+      color $transition,
+      background-position $transition,
+      transform $transition,
+      box-shadow $transition;
+
+    &:hover {
+      --y: 80%;
+      color: $button-hover-text-color;
+      box-shadow: $button-hover-box-shadow;
+      transform: scale(1.025);
+    }
+  }
+}

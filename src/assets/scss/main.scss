@@ -1,0 +1,45 @@
+$background-color: hsl(266, 60%, 26%);
+
+@font-face {
+  font-family: "Lora";
+  src: url('../fonts/Lora-Regular.woff2');
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  src: url('../fonts/AmaticSC-Regular.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url('../fonts/Karla-Regular.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Regular.woff2') format("woff2");
+}
+@font-face {
+  font-family: "Cousine";
+  font-weight: 400;
+  src: url('../fonts/Cousine-Regular.woff2') format("woff2");
+}
+
+
+
+
+:root {
+  --montserrat: "Montserrat", sans-serif;
+  --lora: "Lora", serif;
+  --cousine: "Cousine", monospace;
+  --karla: "Karla", sans-serif;
+  --amatic-sc: "Amatic SC", cursive;
+  --header-font-size: clamp(2.4rem, 2vw + 1rem, 4.4rem);
+  --subheader-font-size: clamp(2.6rem, 2vw + 1rem, 3.8rem);
+}
+
+body {
+  min-height: 100vh;
+  background-color: $background-color;
+  background: center / cover fixed url('/assets/img/bg.webp');
+}
