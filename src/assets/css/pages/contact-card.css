@@ -1,5 +1,6 @@
-body {
-  background: center/cover fixed url("/assets/img/bg.webp"), #3d1b6a; }
+:root {
+  font-size: 62.5%;
+  --y: 0; }
 
 body,
 main,
@@ -74,8 +75,21 @@ h2 {
 
 nav ul {
   row-gap: .4em; }
-  nav ul [role="button"] {
-    font-size: 2.4rem !important;
-    padding: 1.2rem 2.6rem; }
+nav [role="button"] {
+  padding: 1.2rem 2.6rem;
+  border: none;
+  border-radius: 0.75em;
+  color: #d3dbe2;
+  font-size: 2.4rem;
+  text-align: center;
+  cursor: pointer;
+  background: 100% var(--y)/100% 200% no-repeat linear-gradient(rgba(0, 0, 0, 0) 1%, #3d1b6a 50%, #8f2472 80%, #bf6e73 95%), #21225f;
+  box-shadow: 0 0em 1em -0.5em rgba(255, 255, 255, 0.4);
+  transition: color 650ms ease-in-out, background-position 650ms ease-in-out, transform 650ms ease-in-out, box-shadow 650ms ease-in-out; }
+  nav [role="button"]:hover {
+    --y: 80%;
+    color: #fff;
+    box-shadow: 0 0.4em 1.1em -0.3em #f8e6a9;
+    transform: scale(1.025); }
 
 /*# sourceMappingURL=contact-card.css.map */

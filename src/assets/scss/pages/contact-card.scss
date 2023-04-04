@@ -1,16 +1,26 @@
-$background-color: hsl(266, 60%, 26%);
+:root {
+  font-size: 62.5%;
+  --y: 0;
+
+}
 $contact-card-bg: #3d1b6a;
-$button-box-shadow: 0 0em 1em -0.5em rgba(255, 255, 255, 0.4);
-$button-hover-box-shadow: 0 0.4em 1.1em -0.3em rgba(248, 230, 169, 1);
+$button-text-color: #d3dbe2;
+$button-hover-text-color: #fff;
+$button-font-size: 2.4rem;
 $button-element-spacing-vertical: 1.2rem;
 $button-element-spacing-horizontal: 2.6rem;
-$button-font-size: 2.4rem;
+$button-border-radius: 0.75em;
+$button-background-color: hsl(239, 49%, 25%);
+$button-gradient: linear-gradient(
+  hsla(0, 0%, 0%, 0) 1%,
+  hsl(266, 60%, 26%) 50%,
+  hsl(316, 60%, 35%) 80%,
+  hsl(356, 39%, 59%) 95%
+  );
+$button-box-shadow: 0 0em 1em -0.5em rgba(255, 255, 255, 0.4);
+$button-hover-box-shadow: 0 0.4em 1.1em -0.3em rgba(248, 230, 169, 1);
 $transition: 650ms ease-in-out;
-$button-text-color: #d3dbe2;
 
-body {
-  background: center / cover fixed url('/assets/img/bg.webp'), $background-color;
-}
 
 body,
 main,
@@ -103,10 +113,30 @@ h2 {
 nav {
   ul {
     row-gap: .4em;
-    [role="button"] {
-      font-size: $button-font-size !important;
-      padding:  $button-element-spacing-vertical
+  }
+
+  [role="button"] {
+    padding:  $button-element-spacing-vertical
       $button-element-spacing-horizontal;
+    border: none;
+    border-radius: $button-border-radius;
+    color: $button-text-color;
+    font-size: $button-font-size;
+    text-align: center;
+    cursor: pointer;
+    background: 100% var(--y) / 100% 200%  no-repeat $button-gradient, $button-background-color;
+    box-shadow: $button-box-shadow;
+    transition:
+      color $transition,
+      background-position $transition,
+      transform $transition,
+      box-shadow $transition;
+
+    &:hover {
+      --y: 80%;
+      color: $button-hover-text-color;
+      box-shadow: $button-hover-box-shadow;
+      transform: scale(1.025);
     }
   }
 }
