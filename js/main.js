@@ -9,7 +9,7 @@ const sections = document.querySelectorAll('.fade-in');
 window.addEventListener('scroll', function () {
   // Get the current scroll position
   const currentScrollTop =
-    window.pageYOffset || document.documentElement.scrollTop;
+    window.scrollY || document.documentElement.scrollTop;
 
   // Toggle the 'hidden' class on the navivation-bar based on the scroll direction
   if (currentScrollTop > lastScrollTop) {
@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 
   lastScrollTop = currentScrollTop;
 
-  const newScrollPos = window.pageYOffset;
+  const newScrollPos = window.scrollY;
   // If the user has scrolled past 100vh, add the "scrolled" class to the navbar element
   if (newScrollPos > 1000) {
     navBar.classList.add('scrolled');
