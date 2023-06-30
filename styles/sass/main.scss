@@ -1,23 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @import "./vars.scss";
 
+:root {
+  --header-font: "Raleway", sans-serif;
+  --base-font: "Montserrat", sans-serif;
+  --display-font: "Amatic SC", cursive;
 
-
-.fade-in {
-  /* Add a transition to the opacity property */
-  transition: opacity 0.3s;
-  /* Set the initial opacity to 0 */
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s;
-}
-
-.fade-in.visible {
-  /* When the element is visible in the viewport, set the opacity to 1 */
-  opacity: 1;
 }
 
 body {
+  background-color: #3a1954;
   font-size: 1.3rem;
 
   section>p {
@@ -30,19 +21,20 @@ body {
     }
   }
 
-  section>h2 {
-    color: white;
-  }
-
+  section>strong,
+  section>span,
+  section>h2,
   footer>p {
     color: white;
   }
 }
 
-body,
-main,
-footer {
-  background-color: #3a1954;
+section {
+  margin-bottom: 6em;
+
+  &:first-of-type {
+    margin-bottom: 1em;
+  }
 }
 
 #navigation-bar {
@@ -51,14 +43,11 @@ footer {
   right: 0;
   transition: text-shadow ease 300ms;
   transition: background ease-in-out 500ms;
-}
-
-nav.navbar {
   background: hsla(271, 76%, 60%, .35);
 
   a {
     color: white;
-    font-family: $display-font-family;
+    font-family: var(--display-font);
     font-weight: 700;
     font-size: 2.2rem;
     transition: all ease-in 200ms;
@@ -70,7 +59,6 @@ nav.navbar {
 
     &:hover {
       color: white;
-      // color: #f8e6a9;
       text-shadow: #f8e6a9 0 0 25px, #fff 0 0 5px;
     }
 
@@ -102,6 +90,29 @@ nav.navbar {
   }
 }
 
+#home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  .parallax {
+    height: 100vh !important;
+    width: 100%;
+  }
+
+  h1 {
+    position: absolute;
+  }
+}
+
+header h1 {
+  font-family: var(--display-font);
+  font-weight: 700;
+  color: white;
+}
 
 main {
   z-index: 2;
@@ -113,44 +124,77 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
+  font-family: var(--header-font);
   font-weight: 900;
 }
 
-#name {
-  h2 {
+#profile {
+  strong {
+    font-family: var(--header-font);
     font-weight: 400;
+    font-size: 2.3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  span {
+    display: block;
+    font-family: var(--display-font);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: white;
+  }
+
+  #portrait {
+    width: 6.5em;
+    height: 6.5em;
+    border: 0.3em solid #f8e6a9;
+    border-radius: 50%;
+    background-image: url("/img/profilepic.png");
+    background-size: cover;
   }
 }
 
-h1.display-1 {
-  font-family: $display-font-family;
-  font-weight: 700;
-  color: white;
-}
-
-section {
-  margin-bottom: 6em;
-
-  &:first-of-type {
-    margin-bottom: 1em;
-  }
-}
-
-
-
-#home {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.parallax__container {
+  clip: rect(0, auto, auto, 0);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
   width: 100%;
-
-  h1 {
-    position: absolute;
-  }
+  z-index: -100;
 }
+
+.parallax {
+  position: fixed;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%;
+  /* BG behaviour */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fade-in {
+  /* Add a transition to the opacity property */
+  transition: opacity 0.3s;
+  /* Set the initial opacity to 0 */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+
+.fade-in.visible {
+  /* When the element is visible in the viewport, set the opacity to 1 */
+  opacity: 1;
+}
+
 
 .btn-primary {
   --bs-btn-color: #fff;
@@ -167,20 +211,4 @@ section {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #91179f;
   --bs-btn-disabled-border-color: #91179f;
-}
-
-#name {
-  #portrait {
-    width: 6.5em;
-    height: 6.5em;
-    border: 0.3em solid #f8e6a9;
-    border-radius: 50%;
-    background-image: url("/img/myProfessionalPicture.png");
-    background-size: cover;
-  }
-
-  h2 {
-    margin: 0;
-    padding: 0;
-  }
 }
