@@ -17,7 +17,7 @@ function displayPosts(posts) {
     document.getElementById(`image-${i}`).src = currentPost.coverImage.url
     document.getElementById(`title-${i}`).innerText = currentPost.title
     document.getElementById(`brief-${i}`).innerText = currentPost.brief
-    document.getElementById(`date-${i}`).innerText = 'Published at: ' + publishedDate
+    document.getElementById(`date-${i}`).innerText = 'Published: ' + publishedDate
   }
 }
 function sortList(postsList) {

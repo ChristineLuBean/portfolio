@@ -128,6 +128,12 @@ h6 {
   font-weight: 900;
 }
 
+#resume {
+  .btn {
+    padding: .75rem 2rem;
+  }
+}
+
 #profile {
   strong {
     font-family: var(--header-font);
@@ -153,6 +159,34 @@ h6 {
     border-radius: 50%;
     background-image: url("/img/profilepic.png");
     background-size: cover;
+  }
+}
+
+#blog {
+  a {
+    text-decoration: none;
+    transition: transform 200ms ease;
+
+    h5 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  a:hover {
+    transform: translateY(-5px);
+  }
+}
+
+footer {
+  font-size: 1rem;
+  padding: 0 0 2rem 0;
+
+  p {
+    margin: 0;
   }
 }
 
@@ -211,4 +245,21 @@ h6 {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #91179f;
   --bs-btn-disabled-border-color: #91179f;
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #c745c7;
+  --bs-btn-border-color: #c745c7;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #91179f;
+  --bs-btn-hover-border-color: #91179f;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #c745c7;
+  --bs-btn-active-border-color: #c745c7;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #c745c7;
+  --bs-btn-disabled-border-color: #c745c7;
 }
