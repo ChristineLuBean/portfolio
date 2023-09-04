@@ -24,7 +24,7 @@ window.addEventListener('scroll', function () {
   // If the user has scrolled past 100vh, add the "scrolled" class to the navbar element
   if (newScrollPos > 1000) {
     navBar.classList.add('scrolled');
-    console.log('navBar.classList');
+
   } else {
     navBar.classList.remove('scrolled');
   }
