@@ -152,7 +152,7 @@ header {
      /* LAYOUT MOBILE
      /*******************************************/
      .socialMediaBox{
-          min-width: 280px;
+          width: 100vw;
           margin-top:0;
           padding-top: 0;
      }
