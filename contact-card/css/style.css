@@ -53,6 +53,10 @@ h2 {
 .userIcon {
      border: white solid 5px;
      border-radius: 50%;
+     background-image: url("../assets/usericon2.png");
+     background-size: cover;
+     height: 100px;
+     width: 100px;
      background-color: white;
      overflow: hidden;
 }
