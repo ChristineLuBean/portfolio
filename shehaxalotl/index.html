@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SheHaxalotl</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #050d1a;
+      --deep: #07142b;
+      --teal: #0e4d5c;
+      --cyan: #22d4d4;
+      --pink: #ff6eb4;
+      --lavender: #c9a7ff;
+      --white: #e8f7ff;
+      --glass: rgba(14, 77, 92, 0.35);
+      --glow-c: 0 0 18px rgba(34, 212, 212, 0.45);
+      --glow-p: 0 0 18px rgba(255, 110, 180, 0.45);
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND ── */
+    .scene {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(180deg,
+          #030b18 0%, #071830 30%, #0a2540 60%, #0b2e3e 100%);
+      overflow: hidden;
+    }
+
+    /* light rays */
+    .rays {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160%;
+      height: 70%;
+      background: conic-gradient(from 260deg at 50% 0%,
+          transparent 0deg,
+          rgba(34, 212, 212, 0.04) 8deg, transparent 14deg,
+          transparent 22deg,
+          rgba(200, 167, 255, 0.04) 28deg, transparent 34deg,
+          transparent 44deg,
+          rgba(34, 212, 212, 0.03) 50deg, transparent 56deg,
+          transparent 360deg);
+      animation: sway 12s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes sway {
+      from {
+        transform: translateX(-50%) rotate(-3deg);
+      }
+
+      to {
+        transform: translateX(-50%) rotate(3deg);
+      }
+    }
+
+    /* seafloor glow */
+    .floor-glow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 220px;
+      background: radial-gradient(ellipse at 50% 100%,
+          rgba(34, 212, 212, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* bubbles */
+    .bubbles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .b {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid rgba(34, 212, 212, 0.8);
+      background: rgba(34, 212, 212, 0.15);
+      animation: rise linear infinite;
+    }
+
+    .b:nth-child(1) {
+      width: 14px;
+      height: 14px;
+      left: 8%;
+      bottom: 0%;
+      animation-duration: 7s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(2) {
+      width: 9px;
+      height: 9px;
+      left: 18%;
+      bottom: 20%;
+      animation-duration: 9s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(3) {
+      width: 18px;
+      height: 18px;
+      left: 28%;
+      bottom: 5%;
+      animation-duration: 6s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(4) {
+      width: 11px;
+      height: 11px;
+      left: 42%;
+      bottom: 40%;
+      animation-duration: 8s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(5) {
+      width: 8px;
+      height: 8px;
+      left: 55%;
+      bottom: 10%;
+      animation-duration: 10s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(6) {
+      width: 16px;
+      height: 16px;
+      left: 65%;
+      bottom: 30%;
+      animation-duration: 7s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(7) {
+      width: 10px;
+      height: 10px;
+      left: 75%;
+      bottom: 0%;
+      animation-duration: 8s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(8) {
+      width: 13px;
+      height: 13px;
+      left: 88%;
+      bottom: 15%;
+      animation-duration: 9s;
+      animation-delay: 0s;
+    }
+
+    .b:nth-child(9) {
+      width: 7px;
+      height: 7px;
+      left: 33%;
+      bottom: 50%;
+      animation-duration: 6s;
+      animation-delay: 0s;
+      border-color: rgba(255, 110, 180, 0.8);
+      background: rgba(255, 110, 180, 0.12);
+    }
+
+    .b:nth-child(10) {
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      bottom: 25%;
+      animation-duration: 7s;
+      animation-delay: 0s;
+      border-color: rgba(201, 167, 255, 0.8);
+      background: rgba(201, 167, 255, 0.12);
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.9;
+      }
+
+      50% {
+        transform: translateY(-50vh) translateX(12px);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(-110vh) translateX(-8px);
+        opacity: 0;
+      }
+    }
+
+    /* ── CONTENT ── */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 100px;
+    }
+
+    /* avatar */
+    .avatar-wrap {
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #1a6e7a, #071830);
+      border: 3px solid var(--cyan);
+      box-shadow: var(--glow-c), inset 0 0 20px rgba(34, 212, 212, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.6rem;
+      animation: float 5s ease-in-out infinite;
+      overflow: hidden;
+    }
+
+    .avatar-image {
+      width: 110px;
+      height: 110px;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .avatar-ring {
+      position: absolute;
+      inset: -7px;
+      border-radius: 50%;
+      border: 2px dashed rgba(34, 212, 212, 0.3);
+      animation: spin 20s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* name + tagline */
+    .name {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      background: linear-gradient(90deg, var(--cyan), var(--pink), var(--lavender));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .tagline {
+      font-size: .88rem;
+      color: rgba(232, 247, 255, 0.55);
+      text-align: center;
+      margin-top: 6px;
+      letter-spacing: .06em;
+      font-weight: 600;
+    }
+
+    /* divider */
+    .divider {
+      width: 180px;
+      height: 1px;
+      margin: 22px auto;
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--pink), transparent);
+      opacity: .5;
+    }
+
+    /* links */
+    .links {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      background: var(--glass);
+      border: 1px solid rgba(34, 212, 212, 0.2);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(34, 212, 212, 0.08), rgba(255, 110, 180, 0.06));
+      opacity: 0;
+      transition: opacity .2s;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-3px) scale(1.01);
+      border-color: var(--cyan);
+    }
+
+    .link-btn:hover::before {
+      opacity: 1;
+    }
+
+    .link-btn:hover {
+      box-shadow: var(--glow-c);
+    }
+
+    .link-btn.pink:hover {
+      border-color: var(--pink);
+      box-shadow: var(--glow-p);
+    }
+
+    .link-btn.lav:hover {
+      border-color: var(--lavender);
+      box-shadow: 0 0 18px rgba(201, 167, 255, 0.45);
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      min-width: 28px;
+      text-align: center;
+    }
+
+    .label {
+      flex: 1;
+    }
+
+    .sub {
+      display: block;
+      font-size: .72rem;
+      font-weight: 600;
+      color: rgba(232, 247, 255, 0.45);
+      letter-spacing: .06em;
+      margin-top: 1px;
+    }
+
+    .arrow {
+      opacity: .4;
+      font-size: .9rem;
+      transition: opacity .2s, transform .2s;
+    }
+
+    .link-btn:hover .arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: .75rem;
+      color: rgba(232, 247, 255, 0.3);
+      letter-spacing: .08em;
+    }
+
+    .cursor {
+      animation: blink 1.2s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- background scene -->
+  <div class="scene">
+    <div class="rays"></div>
+    <div class="bubbles">
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+    </div>
+    <div class="floor-glow"></div>
+  </div>
+
+  <!-- page content -->
+  <div class="page">
+
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <div class="avatar"><img src="assets/SheHaxalotlAvatar.png" height="110" width="110" class="avatar-image"></div>
+    </div>
+
+    <div class="name">SheHaxalotl</div>
+    <div class="tagline">🫧 cybersecurity · art · cozy gaming · axolotl supremacy 🫧</div>
+
+    <div class="divider"></div>
+
+    <div class="links">
+
+      <a href="https://twitch.tv/SheHaxalotl" target="_blank" class="link-btn pink">
+        <span class="icon">🟣</span>
+        <span class="label">Twitch
+          <span class="sub">LIVE STREAMS · HACKING · VIBES</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a href="https://youtube.com/@SheHaxalotl" target="_blank" class="link-btn">
+        <span class="icon">📺</span>
+        <span class="label">YouTube
+          <span class="sub">VODS · TUTORIALS · CONTENT</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a href="https://christinelubean.com" target="_blank" class="link-btn lav">
+        <span class="icon">🌐</span>
+        <span class="label">Portfolio &amp; Blog
+          <span class="sub">PROJECTS · WRITEUPS · ART</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a href="https://discord.gg/MdpNYMvAz3" target="_blank" class="link-btn">
+        <span class="icon">🫧</span>
+        <span class="label">The Gilled Glitch
+          <span class="sub">DISCORD COMMUNITY · COME LURK</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a href="https://bsky.app/profile/shehaxalotl.bsky.social" target="_blank" class="link-btn lav">
+        <span class="icon">🦋</span>
+        <span class="label">Bluesky
+          <span class="sub">THOUGHTS · UPDATES · MISCHIEF</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a href="https://twitter.com/SheHaxalotl" target="_blank" class="link-btn pink">
+        <span class="icon">🐦</span>
+        <span class="label">Twitter / X
+          <span class="sub">THOUGHTS · UPDATES · MISCHIEF</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+    </div>
+
+    <div class="footer">
+      made with 🩷 &amp; a concerning amount of caffeine<span class="cursor">_</span>
+    </div>
+
+  </div>
+</body>
+
+</html>

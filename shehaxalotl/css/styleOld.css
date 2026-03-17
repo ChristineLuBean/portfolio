@@ -1,0 +1,230 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES ALL
+/*******************************************/
+/* font-family: 'Lato', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+html {
+     font: 16px 'Lato', sans-serif;
+}
+body {
+     background-color:#ecdeeb;
+     background-color: hsl(304, 28%, 89%);
+     text-align: center;
+}
+h1 {
+     color: white;
+     font: 3rem 'Quicksand', sans-serif;
+     font-weight: 500;
+     text-shadow: 2px 3px 3px hsla(0, 0%, 0%, 0.2);
+     margin: 0;
+     padding: 10% 0 0 0;
+     position: relative; 
+}
+h2 {
+     color: white;
+     font: 1.7rem 'Chilanka', cursive;
+     text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.4);
+     padding:  0 0 10    % 0;  
+     position: relative;
+     margin: 0;
+}
+h3 {
+     color: hsl(224, 23%, 55%);
+     font-size: 1rem;
+}
+
+ul, li {
+     list-style-type: none;
+     width: 100%;
+     padding: 0;
+}
+li {
+     padding: 5px 0;
+}
+.headerImage {
+     background: radial-gradient(2000px circle at 35% 450%, hsl(356, 39%, 59%) 41%, hsl(316, 60%, 35%) 45%, hsl(266, 60%, 26%) 52%, hsl(239, 49%, 25%) 55%);
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     position: relative;
+}
+
+#triangleDown {
+     width: 45%;
+     height: 45%;
+     background: linear-gradient(to left, hsl(237, 41%, 39%, 0.8), hsla(300, 35%, 50%, 0.8));;
+     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+     position: absolute; 
+     right: 3%;
+     top: 0;
+   }
+#triangleUp {
+     width: 70%;
+     height: 70%;
+     background: linear-gradient(to left, hsl(237, 41%, 39%, 0.8), hsla(300, 35%, 50%, 0.8));;
+     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+     position: absolute;
+     left: 1%;
+     bottom: 0;
+   }
+   #smallTriangleUp {
+     width: 33%;
+     height: 33%;
+     background: linear-gradient(to right, hsla(347, 34%, 95%, .1) 25%, hsla(347, 34%, 70%, 0.9));
+     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+     position: absolute;
+     left: 42%;
+     bottom: 0;
+   }
+
+/******************************************
+/* LAYOUT ALL
+/*******************************************/
+header {
+     width: 100%;
+     height: 100%;
+     padding: 0;
+     margin: 0 0 12% 0;
+}
+.centerContent, .button {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+.socialMediaBox {
+     background-color: white;
+     height: auto;
+}
+
+.userIcon {
+     border: 5px solid white;
+     background-color: white;
+     background-image: url('assets/usericon.png');
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     margin: 0;
+     padding: 0;
+     position: absolute;
+     bottom: -30%;
+}
+
+
+nav {
+     margin: 0 0 5% 0;
+}
+
+/******************************************
+/* ADDITIONAL STYLES ALL
+/*******************************************/
+@media only screen and (max-device-width: 480px) {
+
+     /******************************************
+     /* BASE STYLES MOBILE
+     /*******************************************/
+
+     body {
+          background-color: white;
+          background-image: none;
+     }
+     img, nav {
+          width: 100%;
+          height: auto;
+     }
+     .button {
+          color: white;
+          text-decoration: none;
+          background-color: hsl(316, 52%, 35%);
+          width: 80%;
+          height: 50px;
+          padding: 5px 0;
+     }
+     /******************************************
+     /* LAYOUT MOBILE
+     /*******************************************/
+
+     .socialMediaBox {
+          width: 480px;
+          height: 50%;
+     }
+
+     header {
+          width: 100%;
+     }
+
+     /******************************************
+     /* ADDITIONAL STYLES MOBILE
+     /*******************************************/
+
+}
+@media only screen and (min-device-width: 481px) {
+
+     /******************************************
+     /* BASE STYLES DESKTOP
+     /*******************************************/
+     body {
+          display: flex;
+          justify-content: center;
+          background: url(../assets/background.png) no-repeat top/cover;
+          background-attachment: fixed;
+
+     }
+     img, nav {
+          width: 100%;
+          height: auto;
+     }
+     .button {
+          color: white;
+          text-decoration: none;
+          background: linear-gradient(hsl(316, 52%, 35%), hsl(337, 39%, 51%));
+          width: 80%;
+          height: 50px;
+          border-radius: 10px;
+          padding: 5px 0;
+     }
+     .button:hover {
+          background: linear-gradient(hsl(270, 56%, 27%), hsl(316, 52%, 35%));
+      }
+
+     /******************************************
+     /* LAYOUT DESKTOP
+     /*******************************************/
+     header {
+          width: 100%;
+          height: 50%;
+     }
+     .socialMediaBox {
+          width: 40%;
+          height: 50%;
+          margin: 3.2% 0;
+          border-radius: 25px;
+          overflow: hidden;
+          box-shadow: 0 20px 35px -20px hsl(224, 23%, 55%);
+     }
+
+     /******************************************
+     /* ADDITIONAL STYLES DESKTOP
+     /*******************************************/
+}
+
